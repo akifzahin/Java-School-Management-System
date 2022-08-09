@@ -1,7 +1,9 @@
 package com.Project.Entities;
+import java.io.*;
 
-public class User 
+public class User implements Serializable
 {
+
 	private String username;
 	private String password;
 	private String email;
@@ -105,13 +107,17 @@ public class User
 		this.address = address;
 	}
 
-	@Override
-	public String toString() 
+	
+	public String printUser() 
 	{
 		return "User [username=" + username + ", password=" + password + ", email=" + email + ", birthDate=" + birthDate
 				+ ", gender=" + gender + ", age=" + age + ", phoneNumber=" + phoneNumber + ", address=" + address.toString() + "]";
 	}
 	
+	public void loginUser()
+	{
+		
+	}
 	public void logoutUser()
 	{
 		
