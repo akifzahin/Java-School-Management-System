@@ -14,7 +14,7 @@ public class User implements Serializable
 	private Address address;
 	
 	public User(String username, String password, String email, String birthDate, String gender, int age,
-			int phoneNumber, Address address) 
+			int phoneNumber,Address address) 
 	{
 		
 		this.username = username;
@@ -110,8 +110,8 @@ public class User implements Serializable
 	
 	public String printUser() 
 	{
-		return "User [username=" + username + ", password=" + password + ", email=" + email + ", birthDate=" + birthDate
-				+ ", gender=" + gender + ", age=" + age + ", phoneNumber=" + phoneNumber + ", address=" + address.toString() + "]";
+		return "username=" + getUsername() + "\n password=" +getPassword()   + "\n email=" +  getEmail() + "\n birthDate="+getBirthDate()  
+				+ "\n gender=" + getGender() + "\n age=" + getAge() + "\n phoneNumber=" + getPhoneNumber() + "\n address=" ;
 	}
 	
 	public void loginUser()
