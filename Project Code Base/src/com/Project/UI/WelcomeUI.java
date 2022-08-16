@@ -41,7 +41,7 @@ public class WelcomeUI extends JFrame {
 	
 	public WelcomeUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(101, 100, 1082, 684);
+		setBounds(101, 100, 1094, 684);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -56,15 +56,29 @@ public class WelcomeUI extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Create Account +");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				CreateAccountUI frame = new CreateAccountUI();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton.setBackground(new Color(204, 204, 255));
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnNewButton.setBounds(365, 268, 286, 43);
+		btnNewButton.setBounds(365, 256, 286, 43);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_2 = new JButton("New button +");
-		btnNewButton_2.setBackground(new Color(204, 204, 255));
-		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnNewButton_2.setBounds(365, 351, 286, 43);
-		contentPane.add(btnNewButton_2);
+		JButton btnLoginUser = new JButton("Login User +");
+		btnLoginUser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				LoginSeparationUI frame = new LoginSeparationUI();
+				frame.setVisible(true);
+			}
+		});
+		btnLoginUser.setBackground(new Color(204, 204, 255));
+		btnLoginUser.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnLoginUser.setBounds(365, 328, 286, 43);
+		contentPane.add(btnLoginUser);
 	}
 }
