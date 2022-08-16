@@ -3,9 +3,20 @@ package com.Project.UI;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.login.Register;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class WelcomeUI extends JFrame {
 
@@ -30,11 +41,30 @@ public class WelcomeUI extends JFrame {
 	
 	public WelcomeUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(101, 100, 450, 300);
+		setBounds(101, 100, 1082, 684);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("SCHOOL MANAGEMENT SYSTEM");
+		lblNewLabel.setBackground(new Color(255, 255, 255));
+		lblNewLabel.setForeground(new Color(153, 51, 102));
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 45));
+		lblNewLabel.setBounds(142, 11, 806, 94);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Create Account +");
+		btnNewButton.setBackground(new Color(204, 204, 255));
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnNewButton.setBounds(365, 268, 286, 43);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_2 = new JButton("New button +");
+		btnNewButton_2.setBackground(new Color(204, 204, 255));
+		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnNewButton_2.setBounds(365, 351, 286, 43);
+		contentPane.add(btnNewButton_2);
 	}
-
 }
