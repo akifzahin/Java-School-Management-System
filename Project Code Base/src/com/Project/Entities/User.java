@@ -1,7 +1,7 @@
 package com.Project.Entities;
 import java.io.*;
 
-public class User implements Serializable
+public abstract class User implements Serializable
 {
 
 	private String username;
@@ -9,16 +9,22 @@ public class User implements Serializable
 	private String email;
 	private String birthDate;
 	private String gender;
+	private String fullName;
 	private int age;
 	private int phoneNumber;
 	private Address address;
 	
-	public User(String username, String password, String email, String birthDate, String gender, int age,
+	public User()
+	{
+		
+	}
+	public User(String username, String password, String fullName, String email, String birthDate, String gender, int age,
 			int phoneNumber,Address address) 
 	{
 		
 		this.username = username;
 		this.password = password;
+		this.fullName = fullName;
 		this.email = email;
 		this.birthDate = birthDate;
 		this.gender = gender;
@@ -56,7 +62,15 @@ public class User implements Serializable
 	{
 		this.email = email;
 	}
-
+	
+	
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	
 	public String getBirthDate() 
 	{
 		return birthDate;
@@ -97,9 +111,9 @@ public class User implements Serializable
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Address getAddress()
+	public String printAddress()
 	{
-		return address;
+		return address.toString();
 	}
 
 	public void setAddress(Address address)
@@ -116,6 +130,7 @@ public class User implements Serializable
 	
 	public void loginUser()
 	{
+		
 		
 	}
 	public void logoutUser()
