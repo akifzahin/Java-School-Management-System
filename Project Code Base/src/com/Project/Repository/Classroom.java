@@ -1,42 +1,69 @@
 package com.Project.Repository;
 
 import java.util.*;
-
 import com.Project.Entities.Student;
 import com.Project.Entities.Teacher;
+
 public class Classroom {
-private int numberofStudents;
-private int numberofTeachers;
-private ArrayList<Student> students=new ArrayList<Student>();
-private ArrayList<Teacher> teachers=new ArrayList<Teacher>();
+public static int numberofStudents=0;
+public static int numberofTeachers=0;
+private ArrayList<Student> studentList=new ArrayList<Student>();
+private ArrayList<Teacher> teacherList=new ArrayList<Teacher>();
+
+public Classroom()
+{
+	
+}
+
 public int getNumberofStudents() {
 	return numberofStudents;
 }
 
-public void setNumberofStudents(int numberofStudents) {
-	this.numberofStudents = numberofStudents;
-}
+//public void setNumberofStudents(int numberofStudents) {
+//	Classroom.numberofStudents = numberofStudents;
+//}
 
 public int getNumberofTeachers() {
 	return numberofTeachers;
 }
 
-public void setNumberofTeachers(int numberofTeachers) {
-	this.numberofTeachers = numberofTeachers;
+//public void setNumberofTeachers(int numberofTeachers) {
+//	Classroom.numberofTeachers = numberofTeachers;
+//}
+public void addToStudentList(Student student)
+{
+	this.studentList.add(student);
 }
 
-public ArrayList<Student> getStudents() {
-	return students;
+public void deleteFromStudentList(Student student)
+{
+	this.studentList.remove(student);
 }
 
-public void setStudents(ArrayList<Student> students) {
-	this.students = students;
+public ArrayList<Student> getStudentList()
+{
+	return studentList;
 }
 
-public ArrayList<Teacher> getTeachers() {
-	return teachers;
+//public void setStudentList(ArrayList<Student> students) {
+//	this.studentList = students;
+//}
+
+public ArrayList<Teacher> getTeacherList() {
+	return teacherList;
 }
 
-public void setTeachers(ArrayList<Teacher> teachers) {
-	this.teachers = teachers;
-}}
+public void addToTeacherList(Teacher teacher)
+{
+	this.teacherList.add(teacher);
+}
+public void deleteFromTeacherList(Teacher teacher)
+{
+	this.teacherList.remove(teacher);
+}
+//public void setTeacherList(ArrayList<Teacher> teachers) {
+//	this.teacherList = teachers;
+//}
+
+
+}

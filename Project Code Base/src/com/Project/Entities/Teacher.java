@@ -1,6 +1,7 @@
 package com.Project.Entities;
 import java.io.*;
 import java.util.*;
+import com.Project.Repository.*;
 
 
 public class Teacher extends User 
@@ -9,7 +10,8 @@ public class Teacher extends User
 	private String designation;
 	private int salary;
 	private int yearsofExperience;
-	private ArrayList<Student> studentList = new ArrayList<Student>();
+	private Classroom classroom;
+	//private ArrayList<Student> studentList = new ArrayList<Student>();
 	
 	public Teacher()
 	{
@@ -19,14 +21,14 @@ public class Teacher extends User
 
 
 	public Teacher(String username, String password, String email, String birthDate, String gender, int age,
-			int phoneNumber, Address address, String subject, String designation, int salary, int yearsofExperience,ArrayList<Student> studentList ) 
+			int phoneNumber, Address address, String subject, String designation, int salary, int yearsofExperience ) 
 	{
 		super(username, password, email, birthDate, gender, designation, age, phoneNumber, address);
 		this.subject = subject;
 		this.designation = designation;
 		this.salary = salary;
 		this.yearsofExperience = yearsofExperience;
-		this.studentList = studentList;
+		
 		
 	}
 
@@ -34,14 +36,7 @@ public class Teacher extends User
 		return subject;
 	}
 	
-	public ArrayList<Student> getStudentList() {
-		return studentList;
-	}
 
-
-	public void addtoStudentList(Student student) {
-		studentList.add(student);
-	}
 
 
 	public void setSubject(String subject) {
@@ -76,35 +71,38 @@ public class Teacher extends User
 	public String viewInfo() 
 	{
 		return "Teacher [subject=" + subject + ", designation=" + designation + ", salary=" + salary
-				+ ", yearsofExperience=" + yearsofExperience + ", studentList=" + studentList + "]";
+				+ ", yearsofExperience=" + yearsofExperience + "]";
 	}
 	
-	public void giveGrades(Student student)
+	public void giveGrades(Student student,char grade)
 	{
 		
 		char[] gradesArray = new char[8];
 		
 		for(int i=0; i<student.getGradeList().length; i++)
 		{
-			if()
+			if(grade == 'A'||grade == 'B'||grade == 'C'||grade == 'D'||grade == 'F')
+			{
+				gradesArray[i]=grade;
+			}
+			else
+			{
+				System.out.println("Invalid Grade!");
+				break;
+			}
 		}
-					
+		
+		student.setGradeList(gradesArray);
 
 	}
 		
 			
-	public void giveAttendance(Student student) 
+	public void giveAttendance(Student student,int present, int absent) 
 	{
 		
-		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Enter Days Present: ");
-			int present = input.nextInt();
 			
 			student.setDaysPresent(present);
-		
-			System.out.println("Enter Days Absent: ");
-			int absent = input.nextInt();
 			
 			student.setDaysAbsent(absent);
 	
@@ -129,6 +127,8 @@ public class Teacher extends User
 		{
 			E.printStackTrace();
 		}
+		
+		System.out.println("Successfully Saved Student");
 	}
 
 	public Teacher deserialize(Teacher teacher)

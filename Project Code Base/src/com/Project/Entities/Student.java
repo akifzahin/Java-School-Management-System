@@ -10,7 +10,6 @@ public class Student extends User
 	private int id;
 	private int daysPresent;
 	private int daysAbsent;
-	private int numberofSubjects;
 	private char[] gradeList;
 	
 	
@@ -105,7 +104,7 @@ public class Student extends User
 		return daysPresent;
 	}
 	
-	public void printAttedance()
+	public void printAttendance()
 	{
 		System.out.println("Days Present: " +daysPresent+"\nDays Absent: " +daysAbsent);
 	}

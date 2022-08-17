@@ -16,7 +16,8 @@ public abstract class User implements Serializable
 	
 	public User()
 	{
-		
+		this.username = "admin";
+		this.password = "password";
 	}
 	public User(String username, String password, String fullName, String email, String birthDate, String gender, int age,
 			int phoneNumber,Address address) 
@@ -32,6 +33,7 @@ public abstract class User implements Serializable
 		this.phoneNumber = phoneNumber;
 		this.address = address;
 	}
+
 
 	public String getUsername() 
 	{
