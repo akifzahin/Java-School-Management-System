@@ -6,18 +6,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import com.login.StudentInfoForm;
-import com.login.TeacherInfoForm;
-
-//import com.login.TeacherInfoForm;
-
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
-import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -25,8 +18,9 @@ import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
-public class CreateAccountUI extends JFrame {
+public class TeacherCreateAccountUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -39,7 +33,7 @@ public class CreateAccountUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CreateAccountUI frame = new CreateAccountUI();
+					TeacherCreateAccountUI frame = new TeacherCreateAccountUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,45 +45,45 @@ public class CreateAccountUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CreateAccountUI() {
+	public TeacherCreateAccountUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1102, 684);
+		setBounds(100, 100, 1042, 622);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("Student Account Creation ");
+		JLabel lblNewLabel_2 = new JLabel("Teacher Account Creation ");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(281, 62, 477, 72);
+		lblNewLabel_2.setBounds(245, 44, 477, 72);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel = new JLabel("Username :");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel.setBounds(276, 217, 133, 44);
+		lblNewLabel.setBounds(245, 180, 133, 44);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblPassword = new JLabel("Password  :");
 		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblPassword.setBounds(276, 289, 133, 44);
+		lblPassword.setBounds(245, 258, 133, 44);
 		contentPane.add(lblPassword);
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(435, 217, 263, 38);
+		textField.setBounds(393, 186, 263, 38);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(435, 297, 263, 38);
+		passwordField.setBounds(393, 258, 263, 38);
 		contentPane.add(passwordField);
 		
 		JButton btnCreate = new JButton("Create");
 		btnCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				try {
-					FileWriter fw = new FileWriter("C:\\Users\\h\\Downloads\\User repository\\Student repository\\stud1.txt",true);
+					FileWriter fw = new FileWriter("C:\\Users\\h\\Downloads\\User repository\\Teacher repository\\teacher1.txt",true);
 
 					if(textField.getText().equals("") && passwordField.getText().equals("")) {
 						JOptionPane.showMessageDialog(btnCreate, "Can't Register :)");
@@ -101,9 +95,8 @@ public class CreateAccountUI extends JFrame {
 						JFrame f = new JFrame();
 						JOptionPane.showMessageDialog(btnCreate, "Registration Completed Successfully");
 						dispose();
-						StudentFormUI frame = new StudentFormUI();
+						teacherFormUI frame = new teacherFormUI();
 						frame.setVisible(true);
-						
 					}
 								
 								
@@ -111,14 +104,10 @@ public class CreateAccountUI extends JFrame {
 								
 								e1.printStackTrace();
 							}
-							
-										
-									
-			
-		}
-			
+			}
 		});
-		btnCreate.setBounds(370, 425, 89, 23);
+		
+		btnCreate.setBounds(330, 385, 89, 23);
 		contentPane.add(btnCreate);
 		
 		JButton btnNewButton_1 = new JButton("Back");
@@ -127,10 +116,10 @@ public class CreateAccountUI extends JFrame {
 				dispose();
 				CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 				frame.setVisible(true);
-				
 			}
 		});
-		btnNewButton_1.setBounds(519, 425, 89, 23);
+		btnNewButton_1.setBounds(485, 385, 89, 23);
 		contentPane.add(btnNewButton_1);
 	}
+
 }

@@ -59,7 +59,7 @@ public class WelcomeUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				CreateAccountUI frame = new CreateAccountUI();
+				CreateAccountSeparationUI  frame = new 	CreateAccountSeparationUI ();
 				frame.setVisible(true);
 			}
 		});
@@ -80,5 +80,16 @@ public class WelcomeUI extends JFrame {
 		btnLoginUser.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnLoginUser.setBounds(365, 328, 286, 43);
 		contentPane.add(btnLoginUser);
+		
+		JButton btnExitSystem = new JButton("Exit System");
+		btnExitSystem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		btnExitSystem.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnExitSystem.setBackground(new Color(204, 204, 255));
+		btnExitSystem.setBounds(365, 403, 286, 43);
+		contentPane.add(btnExitSystem);
 	}
 }

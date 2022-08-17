@@ -52,10 +52,19 @@ public class LoginSeparationUI extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Teacher");
-		rdbtnNewRadioButton.setBounds(410, 221, 109, 23);
+		rdbtnNewRadioButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherLoginUI frame = new TeacherLoginUI();
+				frame.setVisible(true);
+			}
+		});
+		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.BOLD, 18));
+		rdbtnNewRadioButton.setBounds(410, 221, 144, 51);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Student");
+		rdbtnNewRadioButton_1.setFont(new Font("Tahoma", Font.BOLD, 18));
 		rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -63,11 +72,23 @@ public class LoginSeparationUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		rdbtnNewRadioButton_1.setBounds(410, 275, 109, 23);
+		rdbtnNewRadioButton_1.setBounds(410, 275, 144, 49);
 		contentPane.add(rdbtnNewRadioButton_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Admin");
-		rdbtnNewRadioButton_2.setBounds(410, 327, 109, 23);
+		rdbtnNewRadioButton_2.setFont(new Font("Tahoma", Font.BOLD, 18));
+		rdbtnNewRadioButton_2.setBounds(410, 327, 144, 51);
 		contentPane.add(rdbtnNewRadioButton_2);
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(430, 480, 89, 23);
+		contentPane.add(btnNewButton);
 	}
 }

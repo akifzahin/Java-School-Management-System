@@ -6,14 +6,12 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import com.login.StudentEntities;
-
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+
 import java.awt.Font;
+import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -23,7 +21,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 
-public class LoginUI extends JFrame {
+public class TeacherLoginUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -36,7 +34,7 @@ public class LoginUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LoginUI frame = new LoginUI();
+					TeacherLoginUI frame = new TeacherLoginUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,37 +46,37 @@ public class LoginUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public LoginUI() {
+	public TeacherLoginUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1101, 689);
+		setBounds(100, 100, 1035, 647);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Username :");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel.setBounds(272, 231, 133, 44);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblNewLabel_2 = new JLabel("Student Login Page");
+		JLabel lblNewLabel_2 = new JLabel("Teacher Login Page");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(335, 43, 419, 72);
+		lblNewLabel_2.setBounds(289, 48, 419, 72);
 		contentPane.add(lblNewLabel_2);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(414, 239, 263, 38);
-		contentPane.add(textField);
+		JLabel lblNewLabel = new JLabel("Username :");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel.setBounds(262, 233, 133, 44);
+		contentPane.add(lblNewLabel);
 		
 		JLabel lblPassword = new JLabel("Password  :");
 		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblPassword.setBounds(272, 286, 133, 44);
+		lblPassword.setBounds(262, 294, 133, 44);
 		contentPane.add(lblPassword);
 		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(412, 233, 263, 38);
+		contentPane.add(textField);
+		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(414, 288, 263, 38);
+		passwordField.setBounds(412, 294, 263, 38);
 		contentPane.add(passwordField);
 		
 		JButton btnNewButton = new JButton("Login");
@@ -89,7 +87,7 @@ public class LoginUI extends JFrame {
 				String password = passwordField.getText().toString();
 				try {
 					FileReader fr = new FileReader(
-							"C:\\Users\\h\\Downloads\\User repository\\Student repository\\stud1.txt");
+							"C:\\Users\\h\\Downloads\\User repository\\Teacher repository\\teacher1.txt");
 					BufferedReader br = new BufferedReader(fr);
 					String str;
 					try {
@@ -111,19 +109,24 @@ public class LoginUI extends JFrame {
 				if (matched) {
 					JOptionPane.showMessageDialog(btnNewButton, "LogIn Successfull !");
 					dispose();
-					StudentEntUI frame = new StudentEntUI();
+					TeacherEntUI frame = new TeacherEntUI();
 					frame.setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(btnNewButton, "Can't LogIn :) " + "Try again!");
 				}
-			}
 			
+			}
 		});
-		btnNewButton.setBounds(335, 415, 89, 23);
+		btnNewButton.setBounds(360, 430, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Back");
-		btnNewButton_1.setBounds(464, 415, 89, 23);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton_1.setBounds(477, 430, 89, 23);
 		contentPane.add(btnNewButton_1);
 	}
 }
