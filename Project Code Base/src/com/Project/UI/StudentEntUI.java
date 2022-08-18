@@ -12,6 +12,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class StudentEntUI extends JFrame {
 
@@ -46,8 +47,9 @@ public class StudentEntUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel_2 = new JLabel("Student Entities");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(323, 11, 477, 72);
+		lblNewLabel_2.setBounds(278, 11, 477, 72);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Back");
@@ -58,7 +60,7 @@ public class StudentEntUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(355, 569, 89, 37);
+		btnNewButton.setBounds(343, 569, 100, 37);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Home");
@@ -69,8 +71,28 @@ public class StudentEntUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(489, 569, 89, 37);
+		btnNewButton_1.setBounds(545, 569, 100, 37);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("View Information");
+		btnNewButton_2.setBounds(60, 308, 230, 59);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Attendence");
+		btnNewButton_3.setBounds(372, 308, 230, 59);
+		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("Publish Grades");
+		btnNewButton_4.setBounds(670, 308, 235, 59);
+		contentPane.add(btnNewButton_4);
+		
+		JButton btnNewButton_3_1 = new JButton("View Student Info");
+		btnNewButton_3_1.setBounds(210, 437, 230, 59);
+		contentPane.add(btnNewButton_3_1);
+		
+		JButton btnNewButton_2_1 = new JButton("View Salary");
+		btnNewButton_2_1.setBounds(536, 437, 230, 59);
+		contentPane.add(btnNewButton_2_1);
 	}
 
 }
