@@ -10,6 +10,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TeacherEntUI extends JFrame {
 
@@ -49,10 +51,24 @@ public class TeacherEntUI extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherLoginUI frame = new TeacherLoginUI();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton.setBounds(378, 559, 89, 36);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Home");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_1.setBounds(512, 559, 89, 36);
 		contentPane.add(btnNewButton_1);
 	}

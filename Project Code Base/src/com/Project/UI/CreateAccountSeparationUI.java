@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import javax.swing.JButton;
 
 public class CreateAccountSeparationUI extends JFrame {
 
@@ -75,6 +76,16 @@ public class CreateAccountSeparationUI extends JFrame {
 		rdbtnNewRadioButton_1.setFont(new Font("Tahoma", Font.BOLD, 18));
 		rdbtnNewRadioButton_1.setBounds(397, 275, 144, 49);
 		contentPane.add(rdbtnNewRadioButton_1);
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(433, 470, 89, 23);
+		contentPane.add(btnNewButton);
 	}
-
 }

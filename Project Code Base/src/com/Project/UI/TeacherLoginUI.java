@@ -123,7 +123,9 @@ public class TeacherLoginUI extends JFrame {
 		JButton btnNewButton_1 = new JButton("Back");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_1.setBounds(477, 430, 89, 23);

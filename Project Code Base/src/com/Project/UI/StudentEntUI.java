@@ -10,6 +10,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class StudentEntUI extends JFrame {
 
@@ -45,15 +47,29 @@ public class StudentEntUI extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Student Entities");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(301, 11, 477, 72);
+		lblNewLabel_2.setBounds(323, 11, 477, 72);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Back");
-		btnNewButton.setBounds(441, 539, 89, 37);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				LoginUI frame = new LoginUI();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(355, 569, 89, 37);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Home");
-		btnNewButton_1.setBounds(568, 539, 89, 37);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton_1.setBounds(489, 569, 89, 37);
 		contentPane.add(btnNewButton_1);
 	}
 
