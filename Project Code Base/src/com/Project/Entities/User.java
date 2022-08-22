@@ -12,7 +12,7 @@ public abstract class User implements Serializable
 	private String fullName;
 	private int age;
 	private int phoneNumber;
-	private Address address;
+	private String address;
 	
 	public User()
 	{
@@ -20,7 +20,7 @@ public abstract class User implements Serializable
 		this.password = "password";
 	}
 	public User(String username, String password, String fullName, String email, String birthDate, String gender, int age,
-			int phoneNumber,Address address) 
+			int phoneNumber,String address) 
 	{
 		
 		this.username = username;
@@ -113,12 +113,12 @@ public abstract class User implements Serializable
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String printAddress()
+	public String getAddress()
 	{
-		return address.toString();
+		return address;
 	}
 
-	public void setAddress(Address address)
+	public void setAddress(String address)
 	{
 		this.address = address;
 	}
@@ -127,7 +127,7 @@ public abstract class User implements Serializable
 	public String printUser() 
 	{
 		return "username=" + getUsername() + "\npassword=" +getPassword()   + "\nemail=" +  getEmail() + "\nbirthDate="+getBirthDate()  
-				+ "\ngender=" + getGender() + "\nage=" + getAge() + "\nphoneNumber=" + getPhoneNumber() + "\naddress=" ;
+				+ "\ngender=" + getGender() + "\nage=" + getAge() + "\nphoneNumber=" + getPhoneNumber() + "\naddress=" +getAddress() ;
 	}
 	
 	public void loginUser()
