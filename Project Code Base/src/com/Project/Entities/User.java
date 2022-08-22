@@ -126,8 +126,8 @@ public abstract class User implements Serializable
 	
 	public String printUser() 
 	{
-		return "username=" + getUsername() + "\n password=" +getPassword()   + "\n email=" +  getEmail() + "\n birthDate="+getBirthDate()  
-				+ "\n gender=" + getGender() + "\n age=" + getAge() + "\n phoneNumber=" + getPhoneNumber() + "\n address=" ;
+		return "username=" + getUsername() + "\npassword=" +getPassword()   + "\nemail=" +  getEmail() + "\nbirthDate="+getBirthDate()  
+				+ "\ngender=" + getGender() + "\nage=" + getAge() + "\nphoneNumber=" + getPhoneNumber() + "\naddress=" ;
 	}
 	
 	public void loginUser()

@@ -114,7 +114,8 @@ public class Teacher extends User
 		String name = teacher.getFullName();
 		try
 		{
-			FileOutputStream fileOutputStream = new FileOutputStream("src/teacherData/"+name+".txt");
+			String path = "src\\repository data\\teacherData\\"+name+".ser";
+			FileOutputStream fileOutputStream = new FileOutputStream(path);
 			ObjectOutputStream objOutputStream = new ObjectOutputStream(fileOutputStream);
 			
 			objOutputStream.writeObject(teacher);
@@ -136,8 +137,9 @@ public class Teacher extends User
 		Teacher teacherObject = null;
 		String name = teacher.getFullName();
 		try
-		{
-			FileInputStream fileInputStream = new FileInputStream("src/teacherData/"+name+".txt");
+		{	
+			String path = "src\\repository data\\teacherData\\"+name+".ser";
+			FileInputStream fileInputStream = new FileInputStream(path);
 			ObjectInputStream objInputStream = new ObjectInputStream(fileInputStream);
 			
 			teacherObject = (Teacher) objInputStream.readObject();
