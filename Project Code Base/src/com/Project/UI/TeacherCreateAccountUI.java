@@ -95,7 +95,7 @@ public class TeacherCreateAccountUI extends JFrame {
 						JFrame f = new JFrame();
 						JOptionPane.showMessageDialog(btnCreate, "Registration Completed Successfully");
 						dispose();
-						teacherFormUI frame = new teacherFormUI();
+						TeacherFormUI frame = new TeacherFormUI();
 						frame.setVisible(true);
 					}
 								

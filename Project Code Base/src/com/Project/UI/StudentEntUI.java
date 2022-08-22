@@ -100,6 +100,11 @@ public class StudentEntUI extends JFrame {
 		contentPane.add(btnNewButton_4);
 		
 		JButton btnNewButton_3_1 = new JButton("Teacher Review");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnNewButton_3_1.setForeground(new Color(255, 51, 51));
 		btnNewButton_3_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton_3_1.setBounds(210, 437, 230, 59);
