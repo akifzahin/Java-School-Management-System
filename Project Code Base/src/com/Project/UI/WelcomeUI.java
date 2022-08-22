@@ -14,8 +14,15 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Formatter;
 import java.awt.event.ActionEvent;
 
 public class WelcomeUI extends JFrame {
@@ -31,6 +38,7 @@ public class WelcomeUI extends JFrame {
 				try {
 					WelcomeUI frame = new WelcomeUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,19 +51,20 @@ public class WelcomeUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(101, 100, 1094, 684);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(204, 255, 255));
+		contentPane.setBackground(new Color(204, 255, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("SCHOOL MANAGEMENT SYSTEM");
+		JLabel lblNewLabel = new JLabel("Welcome User!");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setForeground(new Color(153, 51, 102));
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 45));
-		lblNewLabel.setBounds(142, 11, 806, 94);
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 45));
+		lblNewLabel.setBounds(137, 218, 806, 94);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Create Account +");
+		JButton btnNewButton = new JButton("Create Account ");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -64,11 +73,11 @@ public class WelcomeUI extends JFrame {
 			}
 		});
 		btnNewButton.setBackground(new Color(204, 204, 255));
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnNewButton.setBounds(365, 256, 286, 43);
+		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
+		btnNewButton.setBounds(389, 322, 286, 43);
 		contentPane.add(btnNewButton);
 		
-		JButton btnLoginUser = new JButton("Login User +");
+		JButton btnLoginUser = new JButton("Login User ");
 		btnLoginUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -77,8 +86,8 @@ public class WelcomeUI extends JFrame {
 			}
 		});
 		btnLoginUser.setBackground(new Color(204, 204, 255));
-		btnLoginUser.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnLoginUser.setBounds(365, 328, 286, 43);
+		btnLoginUser.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
+		btnLoginUser.setBounds(389, 375, 286, 43);
 		contentPane.add(btnLoginUser);
 		
 		JButton btnExitSystem = new JButton("Exit System");
@@ -87,9 +96,29 @@ public class WelcomeUI extends JFrame {
 				dispose();
 			}
 		});
-		btnExitSystem.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnExitSystem.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
 		btnExitSystem.setBackground(new Color(204, 204, 255));
-		btnExitSystem.setBounds(365, 403, 286, 43);
+		btnExitSystem.setBounds(389, 428, 286, 43);
 		contentPane.add(btnExitSystem);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Desktop\\School Management Project\\CSE215.12L-Group-3-School-Management-System\\Project Code Base\\images\\schoolLogo1.png"));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(325, 20, 409, 177);
+		contentPane.add(lblNewLabel_1);
+		ImageIcon image = new ImageIcon("images\\schoolLogo1.png");
+		
+		
+		
+	}
+
+	public static String viewDateandTime()
+	{
+		
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy "); 
+		DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("HH:mm:ss "); 
+		LocalDateTime now1 = LocalDateTime.now();  
+		return "Current Date: " +dtf1.format(now1) +" Current Time: " +dtf2.format(now1);  
+
 	}
 }

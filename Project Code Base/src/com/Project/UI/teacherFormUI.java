@@ -67,93 +67,93 @@ public class teacherFormUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(336, 80, 196, 20);
+		textField.setBounds(253, 80, 196, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		lblNewLabel = new JLabel("User");
-		lblNewLabel.setBounds(206, 83, 49, 14);
+		lblNewLabel.setBounds(108, 82, 49, 14);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("Teacher");
-		lblNewLabel_1.setBounds(206, 0, 386, 25);
+		lblNewLabel_1.setBounds(108, 22, 386, 25);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel_1);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(336, 126, 196, 20);
+		textField_1.setBounds(253, 126, 196, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		lblNewLabel_2 = new JLabel("First Name");
-		lblNewLabel_2.setBounds(206, 128, 78, 17);
+		lblNewLabel_2.setBounds(108, 127, 78, 17);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_2);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(336, 170, 196, 20);
+		textField_2.setBounds(253, 170, 196, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		lblNewLabel_3 = new JLabel("Last Name");
-		lblNewLabel_3.setBounds(206, 173, 64, 14);
+		lblNewLabel_3.setBounds(108, 172, 64, 14);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_3);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(336, 219, 196, 20);
+		textField_3.setBounds(253, 225, 196, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
 		lblNewLabel_4 = new JLabel("Password");
-		lblNewLabel_4.setBounds(206, 222, 78, 14);
+		lblNewLabel_4.setBounds(108, 227, 78, 14);
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_4);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(336, 263, 196, 20);
+		textField_4.setBounds(253, 269, 196, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 		
 		lblNewLabel_5 = new JLabel("Confirm Password");
-		lblNewLabel_5.setBounds(206, 257, 104, 33);
+		lblNewLabel_5.setBounds(108, 262, 104, 33);
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_5);
 		
 		textField_5 = new JTextField();
-		textField_5.setBounds(336, 302, 196, 20);
+		textField_5.setBounds(253, 309, 196, 20);
 		contentPane.add(textField_5);
 		textField_5.setColumns(10);
 		
 		lblNewLabel_6 = new JLabel("Email");
-		lblNewLabel_6.setBounds(206, 301, 90, 25);
+		lblNewLabel_6.setBounds(108, 306, 90, 25);
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_6);
 		
 		rdbtnNewRadioButton = new JRadioButton("Male");
-		rdbtnNewRadioButton.setBounds(336, 333, 90, 23);
+		rdbtnNewRadioButton.setBounds(253, 338, 90, 23);
 		rdbtnNewRadioButton.setBackground(new Color(135, 206, 250));
 		contentPane.add(rdbtnNewRadioButton);
 		
 		rdbtnNewRadioButton_1 = new JRadioButton("Female");
-		rdbtnNewRadioButton_1.setBounds(439, 333, 93, 23);
+		rdbtnNewRadioButton_1.setBounds(376, 338, 93, 23);
 		rdbtnNewRadioButton_1.setBackground(new Color(135, 206, 250));
 		contentPane.add(rdbtnNewRadioButton_1);
 		
 		lblNewLabel_7 = new JLabel("Gender");
-		lblNewLabel_7.setBounds(206, 337, 49, 14);
+		lblNewLabel_7.setBounds(108, 342, 49, 14);
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_7);
 		
 		rdbtnNewRadioButton_2 = new JRadioButton("I Accept all terms and Conditions");
-		rdbtnNewRadioButton_2.setBounds(204, 372, 202, 23);
+		rdbtnNewRadioButton_2.setBounds(108, 383, 202, 23);
 		rdbtnNewRadioButton_2.setBackground(new Color(135, 206, 250));
 		contentPane.add(rdbtnNewRadioButton_2);
 		
 		btnNewButton = new JButton("Register");
-		btnNewButton.setBounds(443, 372, 89, 23);
+		btnNewButton.setBounds(356, 383, 89, 23);
 		btnNewButton.setBackground(new Color(0, 0, 255));
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(btnNewButton);
