@@ -28,6 +28,7 @@ public class CreateAccountSeparationUI extends JFrame {
 				try {
 					CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -42,18 +43,19 @@ public class CreateAccountSeparationUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1056, 690);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(204, 255, 255));
+		contentPane.setBackground(new Color(255, 204, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblYouWantTo = new JLabel("Create account  as?:");
+		JLabel lblYouWantTo = new JLabel("Please select your user type:");
 		lblYouWantTo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblYouWantTo.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblYouWantTo.setBounds(207, 97, 512, 37);
+		lblYouWantTo.setFont(new Font("Microsoft JhengHei", Font.BOLD, 33));
+		lblYouWantTo.setBounds(238, 73, 512, 142);
 		contentPane.add(lblYouWantTo);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Teacher");
+		rdbtnNewRadioButton.setBackground(new Color(255, 204, 255));
 		rdbtnNewRadioButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -61,11 +63,12 @@ public class CreateAccountSeparationUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.BOLD, 18));
-		rdbtnNewRadioButton.setBounds(397, 221, 144, 51);
+		rdbtnNewRadioButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
+		rdbtnNewRadioButton.setBounds(428, 221, 144, 51);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Student");
+		rdbtnNewRadioButton_1.setBackground(new Color(255, 204, 255));
 		rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -73,11 +76,12 @@ public class CreateAccountSeparationUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		rdbtnNewRadioButton_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		rdbtnNewRadioButton_1.setBounds(397, 275, 144, 49);
+		rdbtnNewRadioButton_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
+		rdbtnNewRadioButton_1.setBounds(428, 275, 144, 49);
 		contentPane.add(rdbtnNewRadioButton_1);
 		
 		JButton btnNewButton = new JButton("Back");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -85,7 +89,7 @@ public class CreateAccountSeparationUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(433, 470, 89, 23);
+		btnNewButton.setBounds(418, 387, 144, 35);
 		contentPane.add(btnNewButton);
 	}
 }

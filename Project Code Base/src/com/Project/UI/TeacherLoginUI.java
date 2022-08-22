@@ -20,6 +20,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class TeacherLoginUI extends JFrame {
 
@@ -36,6 +37,7 @@ public class TeacherLoginUI extends JFrame {
 				try {
 					TeacherLoginUI frame = new TeacherLoginUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -56,30 +58,34 @@ public class TeacherLoginUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel_2 = new JLabel("Teacher Login Page");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(289, 48, 419, 72);
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 40));
+		lblNewLabel_2.setBounds(213, 91, 559, 72);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel = new JLabel("Username :");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel.setBounds(262, 233, 133, 44);
+		JLabel lblNewLabel = new JLabel("Username:");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 22));
+		lblNewLabel.setBounds(273, 233, 133, 44);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblPassword = new JLabel("Password  :");
-		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblPassword.setBounds(262, 294, 133, 44);
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPassword.setFont(new Font("Microsoft JhengHei", Font.BOLD, 22));
+		lblPassword.setBounds(273, 294, 133, 44);
 		contentPane.add(lblPassword);
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(412, 233, 263, 38);
+		textField.setBounds(433, 242, 263, 38);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(412, 294, 263, 38);
+		passwordField.setBounds(433, 303, 263, 38);
 		contentPane.add(passwordField);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				boolean matched = false;
@@ -117,10 +123,11 @@ public class TeacherLoginUI extends JFrame {
 			
 			}
 		});
-		btnNewButton.setBounds(360, 430, 89, 23);
+		btnNewButton.setBounds(433, 415, 98, 38);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Back");
+		btnNewButton_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -128,7 +135,19 @@ public class TeacherLoginUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(477, 430, 89, 23);
+		btnNewButton_1.setBounds(555, 415, 98, 38);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("Sign Up");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			dispose();
+			CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
+			frame.setVisible(true);
+			}
+		});
+		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));
+		btnNewButton_1_1.setBounds(499, 487, 98, 38);
+		contentPane.add(btnNewButton_1_1);
 	}
 }

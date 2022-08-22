@@ -13,6 +13,8 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
@@ -88,7 +90,7 @@ public class TeacherEntUI extends JFrame {
 		btnNewButton_2.setBounds(76, 289, 230, 59);
 		contentPane.add(btnNewButton_2);
 		
-		JButton btnNewButton_3 = new JButton("Attendence");
+		JButton btnNewButton_3 = new JButton("Attendance");
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton_3.setForeground(new Color(255, 51, 51));
 		btnNewButton_3.setBounds(393, 289, 230, 59);
@@ -118,5 +120,25 @@ public class TeacherEntUI extends JFrame {
 		ImageIcon img = new ImageIcon(this.getClass().getResource("/teacher1.png"));
 		lblNewLabel.setIcon(img);
 		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setForeground(new Color(255, 0, 51));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_1.setBounds(261, 107, 477, 50);
+		lblNewLabel_1.setText(viewDateandTime());
+		contentPane.add(lblNewLabel_1);
 	}
+
+	public static String viewDateandTime()
+	{
+		
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy "); 
+		DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("HH:mm:ss "); 
+		LocalDateTime now1 = LocalDateTime.now();  
+		return "Current Date: " +dtf1.format(now1) +" Current Time: " +dtf2.format(now1);  
+
+	}
+
 }
+

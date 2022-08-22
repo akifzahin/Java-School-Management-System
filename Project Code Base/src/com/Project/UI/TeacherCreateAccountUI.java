@@ -35,6 +35,7 @@ public class TeacherCreateAccountUI extends JFrame {
 				try {
 					TeacherCreateAccountUI frame = new TeacherCreateAccountUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -56,17 +57,19 @@ public class TeacherCreateAccountUI extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Teacher Account Creation ");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel_2.setBounds(245, 44, 477, 72);
+		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 35));
+		lblNewLabel_2.setBounds(252, 51, 477, 72);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel = new JLabel("Username :");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
+		JLabel lblNewLabel = new JLabel("Username:");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 22));
 		lblNewLabel.setBounds(245, 180, 133, 44);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblPassword = new JLabel("Password  :");
-		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 22));
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPassword.setFont(new Font("Microsoft JhengHei", Font.BOLD, 22));
 		lblPassword.setBounds(245, 258, 133, 44);
 		contentPane.add(lblPassword);
 		
@@ -79,38 +82,44 @@ public class TeacherCreateAccountUI extends JFrame {
 		passwordField.setBounds(393, 258, 263, 38);
 		contentPane.add(passwordField);
 		
-		JButton btnCreate = new JButton("Create");
+		JButton btnCreate = new JButton("Next");
+		btnCreate.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					FileWriter fw = new FileWriter("C:\\Users\\h\\Downloads\\User repository\\Teacher repository\\teacher1.txt",true);
+					String filePath = "src\\login data\\teacherLoginData.txt";
+					FileWriter fw = new FileWriter(filePath,true);
 
-					if(textField.getText().equals("") && passwordField.getText().equals("")) {
-						JOptionPane.showMessageDialog(btnCreate, "Can't Register :)");
+					if(textField.getText().equals("") || passwordField.getText().equals("")) {
+						JOptionPane.showMessageDialog(null, "Please fill up the required fields.");
 						
 					}
 					else {
-						fw.write(textField.getText()+"\t"+	passwordField.getText()+"\n");
+						fw.write("Username: "+textField.getText()+"\nPassword: "+	passwordField.getText()+"\n");
 						fw.close();
 						JFrame f = new JFrame();
-						JOptionPane.showMessageDialog(btnCreate, "Registration Completed Successfully");
+						JOptionPane.showMessageDialog(btnCreate, "Please proceed to the Registration Page.");
 						dispose();
-						TeacherFormUI frame = new TeacherFormUI();
+						teacherFormUI frame = new teacherFormUI();
 						frame.setVisible(true);
-					}
+						}
 								
 								
-							} catch (IOException e1) {
+					} catch (IOException e1) 
+							{
 								
 								e1.printStackTrace();
 							}
+					
+					
 			}
 		});
 		
-		btnCreate.setBounds(330, 385, 89, 23);
+		btnCreate.setBounds(393, 349, 110, 44);
 		contentPane.add(btnCreate);
 		
 		JButton btnNewButton_1 = new JButton("Back");
+		btnNewButton_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -118,8 +127,20 @@ public class TeacherCreateAccountUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(485, 385, 89, 23);
+		btnNewButton_1.setBounds(542, 349, 114, 44);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("Homepage");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				WelcomeUI frame = new WelcomeUI();
+				frame.setVisible(true);
+			}
+		});
+		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
+		btnNewButton_1_1.setBounds(464, 423, 124, 38);
+		contentPane.add(btnNewButton_1_1);
 	}
 
 }

@@ -18,7 +18,7 @@ import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TeacherFormUI extends JFrame {
+public class teacherFormUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField name;
@@ -40,7 +40,7 @@ public class TeacherFormUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TeacherFormUI frame = new TeacherFormUI();
+					teacherFormUI frame = new teacherFormUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -52,12 +52,12 @@ public class TeacherFormUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TeacherFormUI() {
+	public teacherFormUI() {
 		setBackground(new Color(102, 153, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 626, 670);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(204, 255, 255));
+		contentPane.setBackground(new Color(153, 204, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -76,7 +76,7 @@ public class TeacherFormUI extends JFrame {
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all  terms and Conditions");
 		rdbtnNewRadioButton_2.setSelected(false);
-		rdbtnNewRadioButton_2.setBackground(new Color(204, 255, 255));
+		rdbtnNewRadioButton_2.setBackground(new Color(153, 204, 255));
 		rdbtnNewRadioButton_2.setBounds(109, 584, 228, 21);
 		contentPane.add(rdbtnNewRadioButton_2);
 		
