@@ -6,7 +6,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.Project.Entities.Student;
+import com.Project.Entities.Teacher;
+import com.Project.FileHandling.Serializer;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +26,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 
 import java.awt.Color;
+import java.awt.Component;
 
 public class StudentFormUI extends JFrame {
 
@@ -29,10 +37,10 @@ public class StudentFormUI extends JFrame {
 	private JTextField birthdate;
 	private JTextField age;
 	private JTextField gender;
-	private JTextField phnNumber;
+	private JTextField phonenumber;
 	private JTextField standard;
 	private JTextField guardianname;
-	private JTextField guardianphn;
+	private JTextField guardiannumber;
 	private JTextField id;
 
 	/**
@@ -65,8 +73,8 @@ public class StudentFormUI extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("STUDENT  REGISTRATION");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel.setBounds(82, 22, 345, 27);
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 23));
+		lblNewLabel.setBounds(143, 25, 345, 27);
 		JPanel.add(lblNewLabel);
 		
 		name = new JTextField();
@@ -109,14 +117,48 @@ public class StudentFormUI extends JFrame {
 		JPanel.add(comboBoxAuthorGender);
 		
 		JButton btnNewButton = new JButton("Register");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnNewButton.setBounds(309, 594, 118, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				String userFullName = name.getText();
+				String userEmail = email.getText();
+				String userAddress = address.getText();
+				String userBirthDate = birthdate.getText();
+				int userAge = Integer.parseInt(age.getText());
+				String userGender = gender.getText();
+				String userPhoneNumber = phonenumber.getText();
+				String userStandard = standard.getText();
+				String userID = id.getText();
+				String userGuardianNumber = guardiannumber.getText();
+				String userGuardianName = guardianname.getText();
+				
+				Student student = new Student(userFullName,userEmail,userBirthDate,userGender,userAge,
+						userPhoneNumber,userAddress,userStandard,userGuardianName,userGuardianNumber,userID);
+				Serializer.serialize(student);
+				
+				Component btnCreate = null;
+				JOptionPane.showMessageDialog(btnCreate, "Welcome " +userFullName+"!");
+				dispose();
+				StudentEntUI frame = new StudentEntUI();
+				frame.setVisible(true);
+				
+//				if(name.getText().isBlank() || email.getText().isBlank()|| address.getText().isBlank()|| birthdate.getText().isBlank()||
+//				age.getText().isBlank()|| gender.getText().isBlank()|| phonenumber.getText().isBlank()|| standard.getText().isBlank()||
+//				guardianname.getText().isBlank()|| guardiannumber.getText().isBlank() || id.getText().isBlank() )
+//		{
+//			JOptionPane.showMessageDialog(null,"hello");
+//		}
+			}
+		});
+		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
+		btnNewButton.setBounds(353, 590, 118, 23);
 		JPanel.add(btnNewButton);
 		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all  terms and Conditions");
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all the Terms and Conditions");
+		rdbtnNewRadioButton_2.setFont(new Font("Sitka Heading", Font.PLAIN, 13));
 		rdbtnNewRadioButton_2.setBackground(new Color(255, 255, 153));
 		rdbtnNewRadioButton_2.setSelected(false);
-		rdbtnNewRadioButton_2.setBounds(66, 595, 228, 21);
+		rdbtnNewRadioButton_2.setBounds(59, 595, 235, 21);
 		JPanel.add(rdbtnNewRadioButton_2);
 		
 		email = new JTextField();
@@ -168,10 +210,10 @@ public class StudentFormUI extends JFrame {
 		gender.setBounds(183, 295, 112, 23);
 		JPanel.add(gender);
 		
-		phnNumber = new JTextField();
-		phnNumber.setColumns(10);
-		phnNumber.setBounds(183, 338, 228, 27);
-		JPanel.add(phnNumber);
+		phonenumber = new JTextField();
+		phonenumber.setColumns(10);
+		phonenumber.setBounds(183, 338, 228, 27);
+		JPanel.add(phonenumber);
 		
 		standard = new JTextField();
 		standard.setColumns(10);
@@ -190,7 +232,7 @@ public class StudentFormUI extends JFrame {
 		lblNewLabel_1_3_1.setBounds(28, 467, 135, 34);
 		JPanel.add(lblNewLabel_1_3_1);
 		
-		JLabel lblNewLabel_1_3_2 = new JLabel("Guradian Number :");
+		JLabel lblNewLabel_1_3_2 = new JLabel("Guardian Number :");
 		lblNewLabel_1_3_2.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_3_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 		lblNewLabel_1_3_2.setBounds(28, 512, 145, 34);
@@ -201,10 +243,10 @@ public class StudentFormUI extends JFrame {
 		guardianname.setBounds(183, 476, 228, 27);
 		JPanel.add(guardianname);
 		
-		guardianphn = new JTextField();
-		guardianphn.setColumns(10);
-		guardianphn.setBounds(183, 512, 228, 27);
-		JPanel.add(guardianphn);
+		guardiannumber = new JTextField();
+		guardiannumber.setColumns(10);
+		guardiannumber.setBounds(183, 512, 228, 27);
+		JPanel.add(guardiannumber);
 		
 		id = new JTextField();
 		id.setColumns(10);

@@ -1,5 +1,6 @@
 package com.Project.UI;
 
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -7,9 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JRadioButton;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -17,6 +22,8 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import com.Project.Entities.*;
+import com.Project.FileHandling.Serializer;
 
 public class teacherFormUI extends JFrame {
 
@@ -27,10 +34,10 @@ public class teacherFormUI extends JFrame {
 	private JTextField birthdate;
 	private JTextField age;
 	private JTextField gender;
-	private JTextField phnnumber;
+	private JTextField phonenumber;
 	private JTextField subject;
-	private JTextField id;
-	private JTextField deignation;
+	private JTextField bloodgroup;
+	private JTextField designation;
 	private JTextField experience;
 
 	/**
@@ -42,6 +49,8 @@ public class teacherFormUI extends JFrame {
 				try {
 					teacherFormUI frame = new teacherFormUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -53,40 +62,70 @@ public class teacherFormUI extends JFrame {
 	 * Create the frame.
 	 */
 	public teacherFormUI() {
-		setBackground(new Color(102, 153, 255));
+		setBackground(new Color(204, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 626, 670);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblTeacherRegistration = new JLabel("TEACHER REGISTRATION");
 		lblTeacherRegistration.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTeacherRegistration.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblTeacherRegistration.setBounds(104, 24, 345, 27);
+		lblTeacherRegistration.setFont(new Font("Microsoft JhengHei", Font.BOLD, 23));
+		lblTeacherRegistration.setBounds(124, 24, 345, 27);
 		contentPane.add(lblTeacherRegistration);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("ID :");
+		JLabel lblNewLabel_1_1_1 = new JLabel("Blood Group:");
 		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 		lblNewLabel_1_1_1.setBounds(39, 423, 102, 34);
 		contentPane.add(lblNewLabel_1_1_1);
 		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all  terms and Conditions");
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all the Terms and Conditions.");
+		rdbtnNewRadioButton_2.setFont(new Font("Verdana", Font.PLAIN, 15));
 		rdbtnNewRadioButton_2.setSelected(false);
-		rdbtnNewRadioButton_2.setBackground(new Color(153, 204, 255));
-		rdbtnNewRadioButton_2.setBounds(109, 584, 228, 21);
+		rdbtnNewRadioButton_2.setBackground(new Color(204, 255, 255));
+		rdbtnNewRadioButton_2.setBounds(39, 584, 298, 21);
 		contentPane.add(rdbtnNewRadioButton_2);
 		
 		JButton btnNewButton = new JButton("Register");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				String userFullName = name.getText();
+				String userEmail = email.getText();
+				String userAddress = address.getText();
+				String userBirthDate = birthdate.getText();
+				int userAge = Integer.parseInt(age.getText());
+				String userGender = gender.getText();
+				String userPhoneNumber = phonenumber.getText();
+				String userSubject = subject.getText();
+				String userBloodGroup = bloodgroup.getText();
+				String userDesignation = designation.getText();
+				int userYearsOfExperience = Integer.parseInt(experience.getText());
+				
+				Teacher teacher = new Teacher(userFullName,userEmail,userBirthDate,userGender,userAge,
+						userPhoneNumber,userAddress,userSubject,userDesignation,
+						userYearsOfExperience,userBloodGroup);
+				Serializer.serialize(teacher);
+				
+				Component btnCreate = null;
+				JOptionPane.showMessageDialog(btnCreate, "Welcome " +userFullName+"!");
+				dispose();
+				TeacherEntUI frame = new TeacherEntUI();
+				frame.setVisible(true);
+				
+//				if(name.getText().isBlank() || email.getText().isBlank()|| address.getText().isBlank()|| birthdate.getText().isBlank()||
+//						age.getText().isBlank()|| gender.getText().isBlank()|| phonenumber.getText().isBlank()|| subject.getText().isBlank()||
+//						bloodgroup.getText().isBlank()|| designation.getText().isBlank() || experience.getText().isBlank() )
+//				{
+//					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+//				}
 				
 				
-				
+	
 				
 			}
 		});
@@ -117,7 +156,7 @@ public class teacherFormUI extends JFrame {
 		lblNewLabel_1_5_1.setBounds(39, 378, 102, 34);
 		contentPane.add(lblNewLabel_1_5_1);
 		
-		JLabel lblNewLabel_1 = new JLabel("User Name :");
+		JLabel lblNewLabel_1 = new JLabel("Full Name :");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 		lblNewLabel_1.setBounds(39, 85, 102, 34);
@@ -181,25 +220,25 @@ public class teacherFormUI extends JFrame {
 		gender.setBounds(184, 295, 112, 27);
 		contentPane.add(gender);
 		
-		phnnumber = new JTextField();
-		phnnumber.setColumns(10);
-		phnnumber.setBounds(184, 340, 228, 27);
-		contentPane.add(phnnumber);
+		phonenumber = new JTextField();
+		phonenumber.setColumns(10);
+		phonenumber.setBounds(184, 340, 228, 27);
+		contentPane.add(phonenumber);
 		
 		subject = new JTextField();
 		subject.setColumns(10);
 		subject.setBounds(184, 385, 112, 27);
 		contentPane.add(subject);
 		
-		id = new JTextField();
-		id.setColumns(10);
-		id.setBounds(184, 430, 112, 27);
-		contentPane.add(id);
+		bloodgroup = new JTextField();
+		bloodgroup.setColumns(10);
+		bloodgroup.setBounds(184, 430, 112, 27);
+		contentPane.add(bloodgroup);
 		
-		deignation = new JTextField();
-		deignation.setColumns(10);
-		deignation.setBounds(184, 475, 228, 27);
-		contentPane.add(deignation);
+		designation = new JTextField();
+		designation.setColumns(10);
+		designation.setBounds(184, 475, 228, 27);
+		contentPane.add(designation);
 		
 		experience = new JTextField();
 		experience.setColumns(10);
@@ -216,7 +255,7 @@ public class teacherFormUI extends JFrame {
 		comboBoxAuthorGender.setFont(new Font("Tahoma", Font.HANGING_BASELINE, 16));
 		comboBoxAuthorGender.setForeground(Color.BLACK);
 		comboBoxAuthorGender.setBackground(Color.WHITE);
-		comboBoxAuthorGender.setBounds(328, 296, 68, 21);
+		comboBoxAuthorGender.setBounds(328, 296, 84, 21);
 		contentPane.add(comboBoxAuthorGender);
 	}
 }
