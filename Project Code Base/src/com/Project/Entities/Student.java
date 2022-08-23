@@ -6,8 +6,8 @@ public class Student extends User
 {
 	private String standard;
 	private String guardianName;
-	private int guardianNumber;
-	private int id;
+	private String guardianNumber;
+	private String id;
 	private int daysPresent;
 	private int daysAbsent;
 	private char[] gradeList;
@@ -25,10 +25,10 @@ public class Student extends User
 	
 
 
-	public Student(String username, String password, String email, String birthDate, String gender, String fullName,int age,
-			int phoneNumber, Address address, String standard, String guardianName, int guardianNumber, int id, char[] gradeList)
+	public Student(String email, String birthDate, String gender, String fullName,int age,
+			String phoneNumber, String address, String standard, String guardianName, String guardianNumber, String id)
 	{
-		super(username, password, email, birthDate, gender,fullName, age, phoneNumber, address);
+		super(email, birthDate, gender,fullName, age, phoneNumber, address);
 		this.standard = standard;
 		this.guardianName = guardianName;
 		this.guardianNumber = guardianNumber;
@@ -62,25 +62,25 @@ public class Student extends User
 
 
 
-	public int getGuardianNumber() {
+	public String getGuardianNumber() {
 		return guardianNumber;
 	}
 
 
 
-	public void setGuardianNumber(int guardianNumber) {
+	public void setGuardianNumber(String guardianNumber) {
 		this.guardianNumber = guardianNumber;
 	}
 
 
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
 
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	

@@ -11,7 +11,7 @@ public abstract class User implements Serializable
 	private String gender;
 	private String fullName;
 	private int age;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String address;
 	
 	public User()
@@ -19,12 +19,11 @@ public abstract class User implements Serializable
 		this.username = "admin";
 		this.password = "password";
 	}
-	public User(String username, String password, String fullName, String email, String birthDate, String gender, int age,
-			int phoneNumber,String address) 
+	public User(String fullName, String email, String birthDate, String gender, int age,
+			String phoneNumber,String address) 
 	{
 		
-		this.username = username;
-		this.password = password;
+		
 		this.fullName = fullName;
 		this.email = email;
 		this.birthDate = birthDate;
@@ -103,12 +102,12 @@ public abstract class User implements Serializable
 		this.age = age;
 	}
 
-	public int getPhoneNumber()
+	public String getPhoneNumber()
 	{
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber)
+	public void setPhoneNumber(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
 	}
