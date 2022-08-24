@@ -97,7 +97,7 @@ public class TeacherEntUI extends JFrame {
 		btnNewButton_2.setBounds(85, 289, 230, 59);
 		contentPane.add(btnNewButton_2);
 		
-		JButton btnNewButton_3 = new JButton("Attendance");
+		JButton btnNewButton_3 = new JButton("Give Attendance");
 		btnNewButton_3.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_3.setForeground(new Color(255, 51, 51));
 		btnNewButton_3.setBounds(393, 289, 230, 59);
@@ -117,6 +117,13 @@ public class TeacherEntUI extends JFrame {
 		contentPane.add(btnNewButton_2_1);
 		
 		JButton btnNewButton_3_1 = new JButton("View Student Info");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherViewStudentInfo frame = new TeacherViewStudentInfo();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_3_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_3_1.setForeground(new Color(255, 51, 51));
 		btnNewButton_3_1.setBounds(226, 429, 230, 59);

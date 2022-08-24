@@ -13,6 +13,8 @@ import java.awt.Font;
 import java.util.Calendar;
 
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ViewFeesUI extends JFrame {
 
@@ -81,6 +83,13 @@ public class ViewFeesUI extends JFrame {
 		textArea.setText(msg);
 		
 		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				StudentEntUI frame = new StudentEntUI();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton.setForeground(new Color(255, 51, 51));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton.setBounds(453, 519, 100, 37);
