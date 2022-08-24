@@ -85,8 +85,15 @@ public class Teacher extends User
 	
 	public String viewInfo() 
 	{
-		return "Teacher [subject=" + subject + ", designation=" + designation + ", salary=" + salary
-				+ ", yearsofExperience=" + yearsofExperience + "]";
+		String info ="--------------------------------------------------Teacher Info----------------------------------------------------"
+				+ "\n\n  Name: "+getFullName()+"\n\n  Email: "+getEmail()+"\n\n  Address: "
+				+getAddress()+"\n\n  Birth Date: "+getBirthDate()+"\n\n  Age: "+getAge()+"\n\n  Gender: "+getGender()+
+				"\n\n  Phone Number: "+getPhoneNumber()+
+				"\n\n  Subject: "+getSubject()+"\n\n  Blood Group: "+getBloodGroup()+"\n\n  Designation: "+getDesignation()+
+				"\n\n  Years Of Experience: "+getYearsofExperience()
+				+"";
+		
+		return info;
 	}
 	
 	public void giveGrades(Student student,char grade)
