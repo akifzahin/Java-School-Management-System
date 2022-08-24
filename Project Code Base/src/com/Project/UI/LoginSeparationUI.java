@@ -81,6 +81,13 @@ public class LoginSeparationUI extends JFrame {
 		contentPane.add(rdbtnNewRadioButton_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Admin");
+		rdbtnNewRadioButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				AdminLoginUI frame = new AdminLoginUI();
+				frame.setVisible(true);
+			}
+		});
 		rdbtnNewRadioButton_2.setBackground(new Color(255, 204, 255));
 		rdbtnNewRadioButton_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
 		rdbtnNewRadioButton_2.setBounds(431, 327, 144, 51);
