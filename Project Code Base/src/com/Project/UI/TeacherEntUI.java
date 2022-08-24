@@ -103,6 +103,13 @@ public class TeacherEntUI extends JFrame {
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_2_1 = new JButton("View Salary");
+		btnNewButton_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				ViewSalaryUI frame = new ViewSalaryUI();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_2_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_2_1.setForeground(new Color(255, 51, 0));
 		btnNewButton_2_1.setBounds(562, 429, 230, 59);
