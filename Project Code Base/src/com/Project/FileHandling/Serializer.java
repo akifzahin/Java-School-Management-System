@@ -51,7 +51,7 @@ public class Serializer
 			E.printStackTrace();
 		}
 		
-		System.out.println("Successfully Saved Teacher");
+		
 	}
 
 }
