@@ -129,20 +129,7 @@ public abstract class User implements Serializable
 				+ "\ngender=" + getGender() + "\nage=" + getAge() + "\nphoneNumber=" + getPhoneNumber() + "\naddress=" +getAddress() ;
 	}
 	
-	public void loginUser()
-	{
-		
-		
-	}
-	public void logoutUser()
-	{
-		
-	}
 	
-	public void exitProgram()
-	{
-		
-	}
 	
 	
 }
