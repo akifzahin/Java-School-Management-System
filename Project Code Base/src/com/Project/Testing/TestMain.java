@@ -1,23 +1,18 @@
 package com.Project.Testing;
 import com.Project.Repository.*;
 import com.Project.Entities.*;
+import com.Project.FileHandling.Deserializer;
+import com.Project.FileHandling.Serializer;
+import java.io.*;
 
 public class TestMain {
 
 	public static void main(String[] args) 
 	{
-		Student st1 = new Student();
-		Teacher t1 = new Teacher();
-		Admin admin = new Admin();
+		String path = "src\\repository data\\studentData\\Akif.ser";
+		File file = new File(path);
 		
-//		admin.serialize(st1);
-//		Student tmp = admin.deserialize(st1);
-//		tmp.setAge(14);
-//		System.out.println("" + tmp.getAge());
-//		
-//		admin.serialize(tmp);
-//		admin.deserialize(tmp);
-//		System.out.println("" +tmp.printUser());	
+		System.out.println("" + Deserializer.deserializeStudentFile(file).printUser());
 		
 
 		
