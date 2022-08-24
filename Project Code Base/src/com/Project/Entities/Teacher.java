@@ -96,94 +96,74 @@ public class Teacher extends User
 		return info;
 	}
 	
-	public void giveGrades(Student student,char grade)
-	{
-		
-		char[] gradesArray = new char[8];
-		
-		for(int i=0; i<student.getGradeList().length; i++)
-		{
-			if(grade == 'A'||grade == 'B'||grade == 'C'||grade == 'D'||grade == 'F')
-			{
-				gradesArray[i]=grade;
-			}
-			else
-			{
-				System.out.println("Invalid Grade!");
-				break;
-			}
-		}
-		
-		student.setGradeList(gradesArray);
-
-	}
-		
-			
-	public void giveAttendance(Student student,int present, int absent) 
-	{
-		
-		
-			
-			student.setDaysPresent(present);
-			
-			student.setDaysAbsent(absent);
 	
 		
-	}
+			
+//	public void giveAttendance(Student student,int present, int absent) 
+//	{
+//		
+//		
+//			
+//			student.setDaysPresent(present);
+//			
+//			student.setDaysAbsent(absent);
+//	
+//		
+//	}
 	
-	public void serialize(Teacher teacher)
-	{
-		String name = teacher.getFullName();
-		try
-		{
-			String path = "src\\repository data\\teacherData\\"+name+".ser";
-			FileOutputStream fileOutputStream = new FileOutputStream(path);
-			ObjectOutputStream objOutputStream = new ObjectOutputStream(fileOutputStream);
-			
-			objOutputStream.writeObject(teacher);
-			objOutputStream.close();
-			
-			fileOutputStream.close();
-			
-		}
-		catch(IOException E)
-		{
-			E.printStackTrace();
-		}
-		
-		System.out.println("Successfully Saved Student");
-	}
+//	public void serialize(Teacher teacher)
+//	{
+//		String name = teacher.getFullName();
+//		try
+//		{
+//			String path = "src\\repository data\\teacherData\\"+name+".ser";
+//			FileOutputStream fileOutputStream = new FileOutputStream(path);
+//			ObjectOutputStream objOutputStream = new ObjectOutputStream(fileOutputStream);
+//			
+//			objOutputStream.writeObject(teacher);
+//			objOutputStream.close();
+//			
+//			fileOutputStream.close();
+//			
+//		}
+//		catch(IOException E)
+//		{
+//			E.printStackTrace();
+//		}
+//		
+//		System.out.println("Successfully Saved Student");
+//	}
 
-	public Teacher deserialize(Teacher teacher)
-	{	
-		Teacher teacherObject = null;
-		String name = teacher.getFullName();
-		try
-		{	
-			String path = "src\\repository data\\teacherData\\"+name+".ser";
-			FileInputStream fileInputStream = new FileInputStream(path);
-			ObjectInputStream objInputStream = new ObjectInputStream(fileInputStream);
-			
-			teacherObject = (Teacher) objInputStream.readObject();
-			
-			objInputStream.close();
-			fileInputStream.close();
-			
-		}
-		catch(IOException E)
-		{
-			E.printStackTrace();
-
-		}
-		catch(ClassNotFoundException E)
-		{
-			System.out.println("Teacher class not found!");
-			E.printStackTrace();
-
-		}
-		return teacherObject;
-		
-	}
+//	public Teacher deserialize(Teacher teacher)
+//	{	
+//		Teacher teacherObject = null;
+//		String name = teacher.getFullName();
+//		try
+//		{	
+//			String path = "src\\repository data\\teacherData\\"+name+".ser";
+//			FileInputStream fileInputStream = new FileInputStream(path);
+//			ObjectInputStream objInputStream = new ObjectInputStream(fileInputStream);
+//			
+//			teacherObject = (Teacher) objInputStream.readObject();
+//			
+//			objInputStream.close();
+//			fileInputStream.close();
+//			
+//		}
+//		catch(IOException E)
+//		{
+//			E.printStackTrace();
+//
+//		}
+//		catch(ClassNotFoundException E)
+//		{
+//			System.out.println("Teacher class not found!");
+//			E.printStackTrace();
+//
+//		}
+//		return teacherObject;
+//		
+//	}
 	
 	
 	

@@ -14,9 +14,15 @@ public class Student extends User
 	private String id;
 	private int daysPresent;
 	private int daysAbsent;
-	private char[] gradeList;
+	private String mathsGrade,scienceGrade,englishGrade;
 	
 	
+	public String getMathsGrade() {
+		return mathsGrade;
+	}
+
+
+
 	public Student()
 	{
 		super();
@@ -37,7 +43,7 @@ public class Student extends User
 		this.guardianName = guardianName;
 		this.guardianNumber = guardianNumber;
 		this.id = id;
-		gradeList = new char[8];
+	
 	}
 
 
@@ -89,20 +95,6 @@ public class Student extends User
 	}
 	
 	
-	public char[] getGradeList() {
-		return gradeList;
-	}
-	
-	public String printGradeList()
-	{
-		return gradeList.toString();
-	}
-	
-	public void setGradeList(char[] gradeList) {
-		this.gradeList = gradeList;
-	}
-
-
 
 	public int getDaysPresent() {
 		return daysPresent;
@@ -153,10 +145,29 @@ public class Student extends User
 	
 	public void viewResult()
 	{
-		System.out.println("Your grades: " +gradeList.toString() );
+		System.out.println("Your grades:\nMaths: " +getMathsGrade()+"\nScience: "+getScienceGrade()+"\nEnglish: "+getEnglishGrade() );
+		
 	}
 	
-	
+	public void setMathsGrade(String mathsGrade) {
+		this.mathsGrade = mathsGrade;
+	}
+
+	public String getScienceGrade() {
+		return scienceGrade;
+	}
+
+	public void setScienceGrade(String scienceGrade) {
+		this.scienceGrade = scienceGrade;
+	}
+
+	public String getEnglishGrade() {
+		return englishGrade;
+	}
+
+	public void setEnglishGrade(String englishGrade) {
+		this.englishGrade = englishGrade;
+	}
 
 
 
