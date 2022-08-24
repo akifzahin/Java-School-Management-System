@@ -85,6 +85,13 @@ public class TeacherEntUI extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("View Information");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherViewUserInfo frame = new TeacherViewUserInfo();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_2.setForeground(new Color(255, 51, 51));
 		btnNewButton_2.setBounds(85, 289, 230, 59);
