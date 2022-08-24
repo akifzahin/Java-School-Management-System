@@ -129,7 +129,9 @@ public class StudentEntUI extends JFrame {
 
 		btnNewButton_2_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 
-				
+				dispose();
+				ViewFeesUI frame = new ViewFeesUI();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_2_1.setFont(new Font("Tahoma", Font.BOLD, 15));

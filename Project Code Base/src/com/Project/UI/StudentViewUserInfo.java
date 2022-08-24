@@ -79,6 +79,7 @@ public class StudentViewUserInfo extends JFrame {
 		panel.add(scrollPane);
 		
 		JTextArea textArea = new JTextArea();
+		textArea.setBackground(new Color(255, 255, 153));
 		scrollPane.setViewportView(textArea);
 		
 		JButton btnNewButton = new JButton("View");
