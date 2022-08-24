@@ -4,6 +4,10 @@ import java.util.*;
 
 public class Student extends User 
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 100L;
 	private String standard;
 	private String guardianName;
 	private String guardianNumber;

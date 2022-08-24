@@ -6,6 +6,10 @@ import com.Project.Repository.*;
 
 public class Teacher extends User 
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 101L;
 	private String subject;
 	private String designation;
 	private int salary;
