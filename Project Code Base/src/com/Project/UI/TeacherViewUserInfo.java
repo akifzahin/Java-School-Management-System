@@ -49,7 +49,7 @@ public class TeacherViewUserInfo extends JFrame {
 	public TeacherViewUserInfo() {
 		setBackground(new Color(204, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 763, 515);
+		setBounds(100, 100, 763, 594);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,18 +59,22 @@ public class TeacherViewUserInfo extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(204, 255, 255));
-		panel.setBounds(8, 10, 733, 458);
+		panel.setBounds(8, 10, 733, 534);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Enter Name:");
+		JLabel lblNewLabel = new JLabel("Enter Name :");
+		lblNewLabel.setForeground(new Color(255, 51, 102));
 		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(51, 24, 278, 62);
+		lblNewLabel.setBounds(112, 31, 178, 42);
 		panel.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(448, 46, 140, 28);
+		textField.setForeground(new Color(255, 51, 102));
+		textField.setBackground(new Color(204, 255, 255));
+		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textField.setBounds(299, 42, 178, 28);
 		panel.add(textField);
 		textField.setColumns(10);
 		
@@ -80,7 +84,9 @@ public class TeacherViewUserInfo extends JFrame {
 		panel.add(scrollPane);
 	
 		JTextArea textArea = new JTextArea();
+		textArea.setForeground(new Color(255, 51, 102));
 		scrollPane.setViewportView(textArea);
+		textArea.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textArea.setBackground(new Color(204, 255, 255));
 		
 		JButton btnNewButton = new JButton("View");
@@ -99,10 +105,12 @@ public class TeacherViewUserInfo extends JFrame {
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		btnNewButton.setBounds(404, 85, 98, 33);
+		btnNewButton.setBounds(266, 84, 98, 33);
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Back");
+		btnNewButton_1.setBounds(287, 469, 98, 33);
+		panel.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -111,8 +119,6 @@ public class TeacherViewUserInfo extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		btnNewButton_1.setBounds(522, 85, 98, 33);
-		panel.add(btnNewButton_1);
 		
 	}
 
