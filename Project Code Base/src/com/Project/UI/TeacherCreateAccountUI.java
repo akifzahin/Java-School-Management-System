@@ -95,7 +95,7 @@ public class TeacherCreateAccountUI extends JFrame {
 						
 					}
 					else {
-						fw.write("Username: "+textField.getText()+"\nPassword: "+	passwordField.getText()+"\n");
+						fw.write(textField.getText()+"\t"+	passwordField.getText()+"\n");
 						fw.close();
 						JFrame f = new JFrame();
 						JOptionPane.showMessageDialog(btnCreate, "Please proceed to the Registration Page.");

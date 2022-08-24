@@ -93,7 +93,7 @@ public class TeacherLoginUI extends JFrame {
 				String password = passwordField.getText().toString();
 				try {
 					FileReader fr = new FileReader(
-							"C:\\Users\\h\\Downloads\\User repository\\Teacher repository\\teacher1.txt");
+							"src\\login data\\teacherLoginData.txt");
 					BufferedReader br = new BufferedReader(fr);
 					String str;
 					try {

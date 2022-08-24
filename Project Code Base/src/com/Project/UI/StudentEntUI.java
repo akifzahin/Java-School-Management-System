@@ -111,6 +111,11 @@ public class StudentEntUI extends JFrame {
 		contentPane.add(btnNewButton_3_1);
 		
 		JButton btnNewButton_2_1 = new JButton("View Fees");
+		btnNewButton_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnNewButton_2_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton_2_1.setForeground(new Color(255, 51, 51));
 		btnNewButton_2_1.setBounds(536, 437, 230, 59);

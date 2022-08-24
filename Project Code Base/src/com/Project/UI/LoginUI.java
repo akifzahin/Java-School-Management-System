@@ -94,7 +94,7 @@ public class LoginUI extends JFrame {
 				String password = passwordField.getText().toString();
 				try {
 					FileReader fr = new FileReader(
-							"C:\\Users\\h\\Downloads\\User repository\\Student repository\\stud1.txt");
+							"src\\login data\\studentLoginData.txt");
 					BufferedReader br = new BufferedReader(fr);
 					String str;
 					try {

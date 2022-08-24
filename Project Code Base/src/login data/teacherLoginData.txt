@@ -1,8 +1,2 @@
-Username: Akif
-Password:asdf
-Username: ffgg
-Password: nbbbv
-Username: 123
-Password: 123
-Username: Abdul
-Password: 1234
+aman	123
+akif	123
