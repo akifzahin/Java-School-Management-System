@@ -135,8 +135,9 @@ public class Student extends User
 
 	public String viewInfo() 
 	{
-		return "Student [standard=" + standard + ", guardianName=" + guardianName + ", guardianNumber=" + guardianNumber
-				+ ", id=" + id + ", gradeList=" + gradeList + "]" +super.toString();
+		return "Student Info:\nName: "+getFullName()+"\nEmail: "+getEmail()+"\nAddress: "
+				+getAddress()+"\nBirth Date: "+getBirthDate()+"\nAge: "+getAge()+"\nGender: "+getGender()+"\nPhone Number: "+getPhoneNumber()+
+				"\nStandard: "+getStandard()+"\nID: "+getId()+"\nGuardian Name: "+getGuardianName()+"\nGuardian Number: "+getGuardianNumber();
 	}
 	
 	public void viewFees()
@@ -160,55 +161,7 @@ public class Student extends User
 		System.out.println("Your grades: " +gradeList.toString() );
 	}
 	
-	public void serialize(Student student)
-	{
-		String name = student.getFullName();
-		try
-		{
-			FileOutputStream fileOutputStream = new FileOutputStream("src/studentData/"+name+".txt");
-			ObjectOutputStream objOutputStream = new ObjectOutputStream(fileOutputStream);
-			
-			objOutputStream.writeObject(student);
-			objOutputStream.close();
-			
-			fileOutputStream.close();
-			
-		}
-		catch(IOException E)
-		{
-			E.printStackTrace();
-		}
-	}
-
-	public Student deserialize(Student student)
-	{	
-		Student studentObject = null;
-		String name = student.getFullName();
-		try
-		{
-			FileInputStream fileInputStream = new FileInputStream("src/studentData/"+name+".txt");
-			ObjectInputStream objInputStream = new ObjectInputStream(fileInputStream);
-			
-			studentObject = (Student) objInputStream.readObject();
-			
-			objInputStream.close();
-			fileInputStream.close();
-			
-		}
-		catch(IOException E)
-		{
-			E.printStackTrace();
-
-		}
-		catch(ClassNotFoundException E)
-		{
-			System.out.println("Student class not found!");
-			E.printStackTrace();
-
-		}
-		return studentObject;
-		
-	}
+	
 
 
 
