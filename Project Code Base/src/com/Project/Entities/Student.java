@@ -144,16 +144,7 @@ public class Student extends User
 		return info;
 	}
 	
-	public void viewFees()
-	{
-		Formatter fmt = new Formatter();
-		Calendar date1 = Calendar.getInstance();
-		
-		fmt = new Formatter();
-		fmt.format("%tB",date1);
-		System.out.println("Your fees for the month of " +fmt+ " is: 13000");
-		
-	}
+	
 	public void viewAttendance()
 	{
 		System.out.println("Days Present: " +getDaysPresent() );
