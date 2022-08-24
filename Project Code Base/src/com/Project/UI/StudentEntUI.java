@@ -86,6 +86,9 @@ public class StudentEntUI extends JFrame {
 		JButton btnNewButton_2 = new JButton("View Information");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				StudentViewUserInfo frame = new StudentViewUserInfo();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_2.setForeground(new Color(255, 51, 0));
