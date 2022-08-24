@@ -134,7 +134,7 @@ public class StudentEntUI extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_2_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton_2_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 
 		btnNewButton_2_1.setForeground(new Color(255, 51, 51));
 		btnNewButton_2_1.setBounds(536, 437, 230, 59);

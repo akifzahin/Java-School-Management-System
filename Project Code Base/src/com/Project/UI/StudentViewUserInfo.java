@@ -97,8 +97,19 @@ public class StudentViewUserInfo extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(401, 61, 83, 21);
+		btnNewButton.setBounds(353, 75, 83, 21);
 		panel.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Back");
+		btnNewButton_1.setBounds(460, 75, 83, 21);
+		panel.add(btnNewButton_1);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				StudentEntUI frame = new StudentEntUI();
+				frame.setVisible(true);
+			}
+		});
 		
 		
 	}
