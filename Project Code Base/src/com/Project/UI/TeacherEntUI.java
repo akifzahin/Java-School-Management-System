@@ -58,7 +58,7 @@ public class TeacherEntUI extends JFrame {
 		lblNewLabel_2.setBounds(261, 25, 477, 72);
 		contentPane.add(lblNewLabel_2);
 		
-		JButton btnNewButton = new JButton("Back");
+		JButton btnNewButton = new JButton("Logout");
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton.setForeground(new Color(255, 51, 0));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -98,6 +98,13 @@ public class TeacherEntUI extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Give Attendance");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			dispose();
+			TeacherGiveAttendance frame = new TeacherGiveAttendance();
+			frame.setVisible(true);
+			}
+		});
 		btnNewButton_3.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_3.setForeground(new Color(255, 51, 51));
 		btnNewButton_3.setBounds(393, 289, 230, 59);
@@ -132,6 +139,9 @@ public class TeacherEntUI extends JFrame {
 		JButton btnNewButton_4 = new JButton("Publish Grades");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherPublishGrades frame = new TeacherPublishGrades();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_4.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));

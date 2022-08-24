@@ -31,6 +31,7 @@ public class StudentEntUI extends JFrame {
 				try {
 					StudentEntUI frame = new StudentEntUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -97,6 +98,13 @@ public class StudentEntUI extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("View Attendance");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				StudentViewAttendance frame = new StudentViewAttendance();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_3.setForeground(new Color(255, 51, 51));
 		btnNewButton_3.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton_3.setBounds(372, 308, 230, 59);
@@ -105,7 +113,11 @@ public class StudentEntUI extends JFrame {
 		JButton btnNewButton_4 = new JButton("View Grades");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				StudentViewGrades frame = new StudentViewGrades();
+				frame.setVisible(true);
 			}
+			
 		});
 		btnNewButton_4.setForeground(new Color(255, 51, 0));
 		btnNewButton_4.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
