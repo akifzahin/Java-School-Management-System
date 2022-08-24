@@ -115,6 +115,10 @@ public class StudentEntUI extends JFrame {
 		JButton btnNewButton_3_1 = new JButton("Teacher Review");
 		btnNewButton_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
+				TeacherReviewUI frame = new TeacherReviewUI();
+				frame.setVisible(true);
+				
 				
 			}
 		});
