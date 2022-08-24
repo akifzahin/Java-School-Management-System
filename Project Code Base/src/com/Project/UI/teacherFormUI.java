@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import com.Project.Entities.*;
 import com.Project.FileHandling.Serializer;
@@ -93,7 +94,7 @@ public class teacherFormUI extends JFrame {
 		JButton btnNewButton = new JButton("Register");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+			try {	
 				String userFullName = name.getText();
 				String userEmail = email.getText();
 				String userAddress = address.getText();
@@ -105,7 +106,14 @@ public class teacherFormUI extends JFrame {
 				String userBloodGroup = bloodgroup.getText();
 				String userDesignation = designation.getText();
 				int userYearsOfExperience = Integer.parseInt(experience.getText());
-				
+
+				if(name.getText().equals("") || email.getText().equals("")|| address.getText().equals("")|| birthdate.getText().equals("")||
+						age.getText().equals("")|| gender.getText().equals("")|| phonenumber.getText().equals("")|| subject.getText().equals("")||
+						bloodgroup.getText().equals("")|| designation.getText().equals("") || experience.getText().equals("") )
+				{
+					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+				}
+				else {
 				Teacher teacher = new Teacher(userFullName,userEmail,userBirthDate,userGender,userAge,
 						userPhoneNumber,userAddress,userSubject,userDesignation,
 						userYearsOfExperience,userBloodGroup);
@@ -116,14 +124,12 @@ public class teacherFormUI extends JFrame {
 				dispose();
 				TeacherEntUI frame = new TeacherEntUI();
 				frame.setVisible(true);
-				
-//				if(name.getText().isBlank() || email.getText().isBlank()|| address.getText().isBlank()|| birthdate.getText().isBlank()||
-//						age.getText().isBlank()|| gender.getText().isBlank()|| phonenumber.getText().isBlank()|| subject.getText().isBlank()||
-//						bloodgroup.getText().isBlank()|| designation.getText().isBlank() || experience.getText().isBlank() )
-//				{
-//					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
-//				}
-				
+				}
+			}catch(NumberFormatException e1) 
+			{	
+				JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+				e1.printStackTrace();
+			}
 				
 	
 				

@@ -82,7 +82,7 @@ public class StudentFormUI extends JFrame {
 		JPanel.add(name);
 		name.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("User Name :");
+		JLabel lblNewLabel_1 = new JLabel("Full Name :");
 		lblNewLabel_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1.setBounds(28, 73, 102, 34);
@@ -120,6 +120,7 @@ public class StudentFormUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
+				try {
 				String userFullName = name.getText();
 				String userEmail = email.getText();
 				String userAddress = address.getText();
@@ -129,8 +130,15 @@ public class StudentFormUI extends JFrame {
 				String userPhoneNumber = phonenumber.getText();
 				String userStandard = standard.getText();
 				String userID = id.getText();
-				String userGuardianNumber = guardiannumber.getText();
 				String userGuardianName = guardianname.getText();
+				String userGuardianNumber = guardiannumber.getText();
+				if(name.getText().equals("") || email.getText().equals("")|| address.getText().equals("")|| birthdate.getText().equals("")||
+						age.getText().equals("")|| gender.getText().equals("")|| phonenumber.getText().equals("")|| standard.getText().equals("")||
+						id.getText().equals("")|| guardianname.getText().equals("") || guardiannumber.getText().equals("") )
+				{
+					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+				}
+				else {
 				
 				Student student = new Student(userFullName,userEmail,userBirthDate,userGender,userAge,
 						userPhoneNumber,userAddress,userStandard,userGuardianName,userGuardianNumber,userID);
@@ -141,13 +149,11 @@ public class StudentFormUI extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
-				
-//				if(name.getText().isBlank() || email.getText().isBlank()|| address.getText().isBlank()|| birthdate.getText().isBlank()||
-//				age.getText().isBlank()|| gender.getText().isBlank()|| phonenumber.getText().isBlank()|| standard.getText().isBlank()||
-//				guardianname.getText().isBlank()|| guardiannumber.getText().isBlank() || id.getText().isBlank() )
-//		{
-//			JOptionPane.showMessageDialog(null,"hello");
-//		}
+				}
+				}catch(NumberFormatException e1) {
+					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
