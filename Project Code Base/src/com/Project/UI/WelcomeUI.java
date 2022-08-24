@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.login.Register;
+
 
 import javax.swing.JLabel;
 import java.awt.Font;
