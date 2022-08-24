@@ -74,7 +74,7 @@ public class TeacherViewUserInfo extends JFrame {
 		textField.setForeground(new Color(255, 51, 102));
 		textField.setBackground(new Color(204, 255, 255));
 		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
-		textField.setBounds(299, 42, 178, 28);
+		textField.setBounds(285, 42, 192, 28);
 		panel.add(textField);
 		textField.setColumns(10);
 		
@@ -105,11 +105,11 @@ public class TeacherViewUserInfo extends JFrame {
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		btnNewButton.setBounds(266, 84, 98, 33);
+		btnNewButton.setBounds(323, 80, 98, 33);
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Back");
-		btnNewButton_1.setBounds(287, 469, 98, 33);
+		btnNewButton_1.setBounds(323, 468, 98, 33);
 		panel.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
