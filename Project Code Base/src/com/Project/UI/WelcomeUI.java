@@ -102,11 +102,13 @@ public class WelcomeUI extends JFrame {
 		contentPane.add(btnExitSystem);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Desktop\\School Management Project\\CSE215.12L-Group-3-School-Management-System\\Project Code Base\\images\\schoolLogo1.png"));
+
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/schoolLogo1.png"));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setIcon(img);
 		lblNewLabel_1.setBounds(325, 20, 409, 177);
 		contentPane.add(lblNewLabel_1);
-		ImageIcon image = new ImageIcon("images\\schoolLogo1.png");
+
 		
 		
 		
