@@ -134,10 +134,14 @@ public class Student extends User
 
 
 	public String viewInfo() 
-	{
-		return "Student Info:\nName: "+getFullName()+"\nEmail: "+getEmail()+"\nAddress: "
-				+getAddress()+"\nBirth Date: "+getBirthDate()+"\nAge: "+getAge()+"\nGender: "+getGender()+"\nPhone Number: "+getPhoneNumber()+
-				"\nStandard: "+getStandard()+"\nID: "+getId()+"\nGuardian Name: "+getGuardianName()+"\nGuardian Number: "+getGuardianNumber();
+	{String info ="----------------------------------------Student Info--------------------------------------------------"
+			+ "\n\n  Name: "+getFullName()+"\n\n  Email: "+getEmail()+"\n\n  Address: "
+			+getAddress()+"\n\n  Birth Date: "+getBirthDate()+"\n\n  Age: "+getAge()+"\n\n  Gender: "+getGender()+"\n\n  "
+					+ "Phone Number: "+getPhoneNumber()+
+			"\n\n  Standard: "+getStandard()+"\n\n  ID: "+getId()+"\n\n  Guardian Name: "+getGuardianName()+"\n\n  Guardian Number: "
+		  +getGuardianNumber()
+			+"";
+		return info;
 	}
 	
 	public void viewFees()
