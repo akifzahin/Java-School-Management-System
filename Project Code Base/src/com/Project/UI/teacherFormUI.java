@@ -81,12 +81,12 @@ public class teacherFormUI extends JFrame {
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("Blood Group:");
 		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_1_1.setBounds(39, 423, 102, 34);
 		contentPane.add(lblNewLabel_1_1_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("I accept all the Terms and Conditions.");
-		rdbtnNewRadioButton_2.setFont(new Font("Verdana", Font.PLAIN, 15));
+		rdbtnNewRadioButton_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		rdbtnNewRadioButton_2.setSelected(false);
 		rdbtnNewRadioButton_2.setBackground(new Color(204, 255, 255));
 		rdbtnNewRadioButton_2.setBounds(39, 584, 298, 21);
@@ -173,58 +173,58 @@ public class teacherFormUI extends JFrame {
 		
 		JLabel lblNewLabel_1_3_2 = new JLabel("Years Of Experience :");
 		lblNewLabel_1_3_2.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_3_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_3_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_3_2.setBounds(23, 513, 162, 34);
 		contentPane.add(lblNewLabel_1_3_2);
 		
 		JLabel lblNewLabel_1_5 = new JLabel("Designation :");
 		lblNewLabel_1_5.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_5.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_5.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_5.setBounds(39, 468, 102, 34);
 		contentPane.add(lblNewLabel_1_5);
 		
 		JLabel lblNewLabel_1_5_1 = new JLabel("Subject :");
 		lblNewLabel_1_5_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_5_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_5_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_5_1.setBounds(39, 378, 102, 34);
 		contentPane.add(lblNewLabel_1_5_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Full Name :");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1.setBounds(39, 85, 102, 34);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_6 = new JLabel("Email :");
-		lblNewLabel_6.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_6.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_6.setBounds(39, 130, 102, 27);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_3 = new JLabel("Address :");
-		lblNewLabel_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 15));
+		lblNewLabel_3.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_3.setBounds(39, 168, 87, 26);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_2 = new JLabel("Birthdate :");
-		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_2.setBounds(39, 205, 102, 27);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Age :");
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_1.setBounds(39, 243, 102, 34);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Gender :");
 		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_2.setBounds(39, 288, 102, 34);
 		contentPane.add(lblNewLabel_1_2);
 		
 		JLabel lblNewLabel_1_3 = new JLabel("Phone Number :");
 		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_1_3.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		lblNewLabel_1_3.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		lblNewLabel_1_3.setBounds(39, 333, 135, 34);
 		contentPane.add(lblNewLabel_1_3);
 		
