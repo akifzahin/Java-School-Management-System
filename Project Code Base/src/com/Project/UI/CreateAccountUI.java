@@ -7,10 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.login.StudentInfoForm;
-import com.login.TeacherInfoForm;
 
-//import com.login.TeacherInfoForm;
+
+
 
 import java.awt.Color;
 import javax.swing.JLabel;
