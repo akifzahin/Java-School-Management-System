@@ -61,6 +61,7 @@ public class LoginSeparationUI extends JFrame {
 				dispose();
 				TeacherLoginUI frame = new TeacherLoginUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		rdbtnNewRadioButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
@@ -75,6 +76,7 @@ public class LoginSeparationUI extends JFrame {
 				dispose();
 				LoginUI frame = new LoginUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		rdbtnNewRadioButton_1.setBounds(431, 276, 144, 49);
@@ -86,6 +88,7 @@ public class LoginSeparationUI extends JFrame {
 				dispose();
 				AdminLoginUI frame = new AdminLoginUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		rdbtnNewRadioButton_2.setBackground(new Color(255, 204, 255));
@@ -100,6 +103,7 @@ public class LoginSeparationUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setBounds(431, 422, 124, 37);

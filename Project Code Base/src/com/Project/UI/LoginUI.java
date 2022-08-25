@@ -118,6 +118,7 @@ public class LoginUI extends JFrame {
 					dispose();
 					StudentEntUI frame = new StudentEntUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} else {
 					JOptionPane.showMessageDialog(btnNewButton, "Login Failed 😩" + " Try again!");
 				}
@@ -134,6 +135,7 @@ public class LoginUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(549, 400, 105, 38);
@@ -145,6 +147,7 @@ public class LoginUI extends JFrame {
 				dispose();
 				CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));

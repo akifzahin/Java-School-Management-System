@@ -109,6 +109,7 @@ public class CreateAccountUI extends JFrame {
 						dispose();
 						StudentFormUI frame = new StudentFormUI();
 						frame.setVisible(true);
+						frame.setResizable(false);
 						}
 								
 								
@@ -131,6 +132,7 @@ public class CreateAccountUI extends JFrame {
 				dispose();
 				CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 				
 			}
 		});
@@ -143,6 +145,7 @@ public class CreateAccountUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));

@@ -61,6 +61,7 @@ public class CreateAccountSeparationUI extends JFrame {
 				dispose();
 				TeacherCreateAccountUI frame = new TeacherCreateAccountUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		rdbtnNewRadioButton.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
@@ -74,6 +75,7 @@ public class CreateAccountSeparationUI extends JFrame {
 				dispose();
 				CreateAccountUI frame = new CreateAccountUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		rdbtnNewRadioButton_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 18));
@@ -87,6 +89,7 @@ public class CreateAccountSeparationUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setBounds(418, 387, 144, 35);
