@@ -94,7 +94,7 @@ public class AdminLoginUI extends JFrame {
 					matched = true;
 				}
 				if (matched) {
-					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 🥳");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 😍");
 					dispose();
 					AdminEntUI frame = new AdminEntUI();
 					frame.setVisible(true);

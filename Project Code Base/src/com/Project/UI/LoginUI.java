@@ -114,7 +114,7 @@ public class LoginUI extends JFrame {
 					e1.printStackTrace();
 				}
 				if (matched) {
-					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 🥳");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 😍");
 					dispose();
 					StudentEntUI frame = new StudentEntUI();
 					frame.setVisible(true);

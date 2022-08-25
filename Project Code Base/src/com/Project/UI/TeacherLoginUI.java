@@ -113,7 +113,7 @@ public class TeacherLoginUI extends JFrame {
 					e1.printStackTrace();
 				}
 				if (matched) {
-					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 🥳");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 😍");
 					dispose();
 					TeacherEntUI frame = new TeacherEntUI();
 					frame.setVisible(true);
