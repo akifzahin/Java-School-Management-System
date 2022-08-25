@@ -225,8 +225,8 @@ public class AdminEntUI extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(8, 10, 453, 190);
-		ImageIcon img = new ImageIcon(this.getClass().getResource("/adminLogo.png"));
+		lblNewLabel_2.setBounds(56, 10, 322, 190);
+		ImageIcon img = new ImageIcon(this.getClass().getResource("/admin1.png"));
 		lblNewLabel_2.setIcon(img);
 		contentPane.add(lblNewLabel_2);
 		
