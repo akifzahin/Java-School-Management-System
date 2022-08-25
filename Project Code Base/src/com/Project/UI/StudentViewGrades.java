@@ -40,6 +40,7 @@ public class StudentViewGrades extends JFrame {
 				try {
 					StudentViewGrades frame = new StudentViewGrades();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -139,6 +140,7 @@ public class StudentViewGrades extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnBack.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));

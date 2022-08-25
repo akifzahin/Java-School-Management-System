@@ -38,6 +38,7 @@ public class StudentViewAttendance extends JFrame {
 				try {
 					StudentViewAttendance frame = new StudentViewAttendance();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

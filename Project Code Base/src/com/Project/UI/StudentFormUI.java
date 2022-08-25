@@ -56,6 +56,7 @@ public class StudentFormUI extends JFrame {
 				try {
 					StudentFormUI frame = new StudentFormUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -153,6 +154,7 @@ public class StudentFormUI extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 				}
 				}catch(NumberFormatException e1) {
 					JOptionPane.showMessageDialog(null, "Please complete the entire form.");

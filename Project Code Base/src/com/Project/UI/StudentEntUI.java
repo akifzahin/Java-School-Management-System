@@ -66,6 +66,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				LoginUI frame = new LoginUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setBounds(343, 569, 100, 37);
@@ -79,6 +80,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(545, 569, 100, 37);
@@ -90,6 +92,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				StudentViewUserInfo frame = new StudentViewUserInfo();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2.setForeground(new Color(255, 51, 0));
@@ -103,6 +106,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				StudentViewAttendance frame = new StudentViewAttendance();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_3.setForeground(new Color(255, 51, 51));
@@ -116,6 +120,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				StudentViewGrades frame = new StudentViewGrades();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 			
 		});
@@ -130,6 +135,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				TeacherReviewUI frame = new TeacherReviewUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 				
 				
 			}
@@ -148,6 +154,7 @@ public class StudentEntUI extends JFrame {
 				dispose();
 				ViewFeesUI frame = new ViewFeesUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
