@@ -29,6 +29,7 @@ public class ViewFeesUI extends JFrame {
 				try {
 					ViewFeesUI frame = new ViewFeesUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,7 +68,7 @@ public class ViewFeesUI extends JFrame {
 				+ ".........................................................................."
 				+ "..........................................................................."
 				+ "..........................................................................."+ 
-				"\n\n\t\t*Your Fees for month of "+ Month + " is 75,000 BDT." + "\n\n"
+				"\n\n\t\t*Your Fees for month of "+ Month + " is 12,000 BDT." + "\n\n"
 				+ "\t\t* You can Pay your Fees at the following banking system \n\n"+
 				"\t\t\t# Bkash(Mobile Banking)\n\n"
 				+ "\t\t\t# SouthEast Bank\n\n"
@@ -88,6 +89,7 @@ public class ViewFeesUI extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 51, 51));

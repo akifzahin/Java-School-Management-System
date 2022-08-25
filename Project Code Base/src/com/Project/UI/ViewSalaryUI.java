@@ -29,6 +29,7 @@ public class ViewSalaryUI extends JFrame {
 				try {
 					ViewSalaryUI frame = new ViewSalaryUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -82,6 +83,7 @@ public class ViewSalaryUI extends JFrame {
 				dispose();
 				TeacherEntUI frame = new TeacherEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 51, 51));
