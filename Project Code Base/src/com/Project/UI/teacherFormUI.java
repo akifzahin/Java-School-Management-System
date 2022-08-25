@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import com.Project.Entities.*;
@@ -130,7 +131,32 @@ public class teacherFormUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please complete the entire form.");
 				e1.printStackTrace();
 			}
+			try {
 				
+				//write data into Teacher file 
+				FileWriter fw = new FileWriter("src\\repository data\\TeacherDatabase.txt",true);
+				fw.write("---------------------------------------------------------------------------------------------"
+						+ "--------------------------------------------------------------------------------------------"+"\n\n");
+				fw.write(" Teacher Name : "+name .getText() + "\n\n");
+				fw.write(" Email : "+ email.getText() + "\n\n");
+				fw.write(" Address : "+ address.getText() + "\n\n");
+				fw.write(" BirthDate : "+birthdate.getText() + "\n\n");
+				fw.write(" Age  : "+ age.getText() + "\n\n");
+				fw.write(" Gender : "+gender.getText() + "\n\n");
+				
+				fw.write(" PhoneNumber: "+ phonenumber.getText() + "\n\n");
+				fw.write(" Subject : "+subject.getText()  + "\n\n");
+				fw.write(" Blood Group : "+ bloodgroup.getText()+ "\n\n");
+				fw.write(" Designation : "+designation.getText()   + "\n\n");
+				fw.write(" YEears Of Experience : "+experience.getText() + "\n\n");
+				fw.write("---------------------------------------------------------------------------------------------"
+						+ "---------------------------------------------------------------------------------------------"+"\n");
+				fw.close();
+				JOptionPane.showMessageDialog(null, " Added Information to Teacher Database ");	
+			} catch (IOException e1) {
+				JOptionPane.showMessageDialog(null, "can't add info to Teacher Database ");				
+				e1.printStackTrace();
+			}
 	
 				
 			}
