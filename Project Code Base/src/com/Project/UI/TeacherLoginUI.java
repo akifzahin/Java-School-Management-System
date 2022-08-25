@@ -113,12 +113,14 @@ public class TeacherLoginUI extends JFrame {
 					e1.printStackTrace();
 				}
 				if (matched) {
-					JOptionPane.showMessageDialog(btnNewButton, "LogIn Successfull !");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 🥳");
 					dispose();
 					TeacherEntUI frame = new TeacherEntUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} else {
-					JOptionPane.showMessageDialog(btnNewButton, "Can't LogIn :) " + "Try again!");
+					
+					JOptionPane.showMessageDialog(btnNewButton, "Login Failed 😩" + " Try again!");
 				}
 			
 			}
@@ -133,6 +135,7 @@ public class TeacherLoginUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(555, 415, 98, 38);
@@ -144,6 +147,7 @@ public class TeacherLoginUI extends JFrame {
 			dispose();
 			CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 			frame.setVisible(true);
+			frame.setResizable(false);
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));

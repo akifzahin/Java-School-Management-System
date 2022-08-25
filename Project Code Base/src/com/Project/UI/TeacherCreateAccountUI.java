@@ -102,6 +102,7 @@ public class TeacherCreateAccountUI extends JFrame {
 						dispose();
 						teacherFormUI frame = new teacherFormUI();
 						frame.setVisible(true);
+						frame.setResizable(false);
 						}
 								
 								
@@ -125,6 +126,7 @@ public class TeacherCreateAccountUI extends JFrame {
 				dispose();
 				CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(542, 349, 114, 44);

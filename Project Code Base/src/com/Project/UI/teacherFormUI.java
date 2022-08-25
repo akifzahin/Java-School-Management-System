@@ -125,6 +125,7 @@ public class teacherFormUI extends JFrame {
 				dispose();
 				TeacherEntUI frame = new TeacherEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 				}
 			}catch(NumberFormatException e1) 
 			{	

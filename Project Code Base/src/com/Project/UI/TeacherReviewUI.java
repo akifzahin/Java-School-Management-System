@@ -36,6 +36,7 @@ public class TeacherReviewUI extends JFrame {
 				try {
 					TeacherReviewUI frame = new TeacherReviewUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -128,6 +129,7 @@ public class TeacherReviewUI extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnBack.setFont(new Font("Tahoma", Font.BOLD, 15));

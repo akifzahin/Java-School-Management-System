@@ -41,6 +41,7 @@ public class TeacherGiveAttendance extends JFrame {
 				try {
 					TeacherGiveAttendance frame = new TeacherGiveAttendance();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

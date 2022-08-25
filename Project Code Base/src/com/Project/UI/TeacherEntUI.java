@@ -66,6 +66,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				TeacherLoginUI frame = new TeacherLoginUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setBounds(367, 559, 89, 36);
@@ -79,6 +80,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(560, 559, 89, 36);
@@ -90,6 +92,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				TeacherViewUserInfo frame = new TeacherViewUserInfo();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
@@ -103,6 +106,7 @@ public class TeacherEntUI extends JFrame {
 			dispose();
 			TeacherGiveAttendance frame = new TeacherGiveAttendance();
 			frame.setVisible(true);
+			frame.setResizable(false);
 			}
 		});
 		btnNewButton_3.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
@@ -116,6 +120,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				ViewSalaryUI frame = new ViewSalaryUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
@@ -129,6 +134,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				TeacherViewStudentInfo frame = new TeacherViewStudentInfo();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_3_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
@@ -142,6 +148,7 @@ public class TeacherEntUI extends JFrame {
 				dispose();
 				TeacherPublishGrades frame = new TeacherPublishGrades();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_4.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));

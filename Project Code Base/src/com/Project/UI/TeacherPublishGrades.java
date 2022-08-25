@@ -42,6 +42,7 @@ public class TeacherPublishGrades extends JFrame {
 				try {
 					TeacherPublishGrades frame = new TeacherPublishGrades();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -73,12 +73,15 @@ public class TeacherViewStudentInfo extends JFrame {
 		panel.setLayout(null);
 		
 		txtEnterName = new JTextField();
+		txtEnterName.setForeground(Color.RED);
+		txtEnterName.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		txtEnterName.setBounds(378, 24, 126, 27);
 		panel.add(txtEnterName);
 		txtEnterName.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Enter Student Name:");
-		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 24));
+		lblNewLabel.setForeground(Color.RED);
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(71, 10, 258, 50);
 		panel.add(lblNewLabel);
@@ -88,10 +91,13 @@ public class TeacherViewStudentInfo extends JFrame {
 		panel.add(scrollPane);
 		
 		JTextArea textArea = new JTextArea();
+		textArea.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		textArea.setForeground(Color.RED);
 		textArea.setBackground(new Color(204, 255, 255));
 		scrollPane.setViewportView(textArea);
 		
 		JButton btnNewButton = new JButton("View");
+		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 10));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String path = "src\\repository data\\studentData\\" +txtEnterName.getText()+".ser";
@@ -110,6 +116,7 @@ public class TeacherViewStudentInfo extends JFrame {
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Back");
+		btnNewButton_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 10));
 		btnNewButton_1.setBounds(460, 75, 83, 21);
 		panel.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -117,6 +124,7 @@ public class TeacherViewStudentInfo extends JFrame {
 				dispose();
 				TeacherEntUI frame = new TeacherEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		
