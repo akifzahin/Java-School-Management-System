@@ -101,10 +101,12 @@ public class TeacherReviewUI extends JFrame {
 					FileWriter fr = new FileWriter (obj,true);
 					fr.write("............................................................................................"
 							+ "............................................................................................"+"\n");
-					fr.write(" Teacher Name :" +textField .getText()+"\n\n");
+					fr.write(" Teacher Name : " +textField .getText()+"\n\n");
 					fr.write(" Subject      : " +textField_1 .getText()+"\n\n");
-					fr.write(" Review :  "+textArea.getText()+"\n");
-					fr.write(" - By Anonymous."+"\n");
+					fr.write(" Review :  "+"\n"+"\n"+textArea.getText()+"\n\n");
+					
+					fr.write("  - By Anonymous."+"\n");
+					
 					fr.write("........................................................................................."
 							+ "......................................................................................"+"\n");
 					fr.close();
