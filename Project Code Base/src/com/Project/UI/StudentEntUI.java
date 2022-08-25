@@ -58,7 +58,7 @@ public class StudentEntUI extends JFrame {
 		lblNewLabel_2.setBounds(260, 46, 581, 72);
 		contentPane.add(lblNewLabel_2);
 		
-		JButton btnNewButton = new JButton("Back");
+		JButton btnNewButton = new JButton("Logout");
 		btnNewButton.setForeground(new Color(255, 51, 51));
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
 		btnNewButton.addActionListener(new ActionListener() {
