@@ -11,12 +11,24 @@ import com.Project.Entities.Student;
 import com.Project.Entities.Teacher;
 import com.Project.FileHandling.Serializer;
 
+import main.Adventure;
+import main.Author;
+import main.Book;
+import main.Comedy;
+import main.Fiction;
+import main.Genre;
+import main.Horror;
+import main.Thriller;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -152,6 +164,34 @@ public class StudentFormUI extends JFrame {
 				}
 				}catch(NumberFormatException e1) {
 					JOptionPane.showMessageDialog(null, "Please complete the entire form.");
+					e1.printStackTrace();
+				}	
+					
+					
+					try {
+					
+					//write data into Student file 
+					FileWriter fw = new FileWriter("src\\repository data\\StudentDatabase.txt",true);
+					fw.write("---------------------------------------------------------------------------------------------"
+							+ "--------------------------------------------------------------------------------------------"+"\n\n");
+					fw.write(" Student Name : "+name .getText() + "\n\n");
+					fw.write(" Email : "+ email.getText() + "\n\n");
+					fw.write(" Address : "+ address.getText() + "\n\n");
+					fw.write(" BirthDate : "+birthdate.getText() + "\n\n");
+					fw.write(" Age  : "+ age.getText() + "\n\n");
+					fw.write(" Gender : "+gender.getText() + "\n\n");
+					
+					fw.write(" PhoneNumber: "+ phonenumber.getText() + "\n\n");
+					fw.write(" Standard : "+standard.getText()  + "\n\n");
+					fw.write(" Student ID : "+ id.getText()+ "\n\n");
+					fw.write(" GuardianName : "+guardianname.getText()   + "\n\n");
+					fw.write(" Guardian Phone Number : "+guardiannumber.getText() + "\n\n");
+					fw.write("---------------------------------------------------------------------------------------------"
+							+ "---------------------------------------------------------------------------------------------"+"\n");
+					fw.close();
+					JOptionPane.showMessageDialog(null, " Added Information to Student Database ");	
+				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(null, "can't add info to Student Database ");				
 					e1.printStackTrace();
 				}
 			}
