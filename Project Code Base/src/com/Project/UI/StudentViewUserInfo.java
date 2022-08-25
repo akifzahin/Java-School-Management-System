@@ -85,7 +85,7 @@ public class StudentViewUserInfo extends JFrame {
 		JTextArea textArea = new JTextArea();
 		textArea.setForeground(new Color(255, 51, 102));
 		textArea.setBackground(new Color(255, 255, 153));
-		textArea.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textArea.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 		scrollPane.setViewportView(textArea);
 		
 		JButton btnNewButton_2 = new JButton("View");
@@ -104,7 +104,7 @@ public class StudentViewUserInfo extends JFrame {
 			}
 		});
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		btnNewButton_2.setBounds(247, 63, 98, 33);
+		btnNewButton_2.setBounds(304, 59, 98, 33);
 		panel.add(btnNewButton_2);
 		
 		JButton btnNewButton_1_1 = new JButton("Back");
@@ -113,10 +113,11 @@ public class StudentViewUserInfo extends JFrame {
 				dispose();
 				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		btnNewButton_1_1.setBounds(274, 470, 98, 33);
+		btnNewButton_1_1.setBounds(304, 470, 98, 33);
 		panel.add(btnNewButton_1_1);
 		
 		

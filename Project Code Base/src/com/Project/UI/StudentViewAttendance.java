@@ -79,11 +79,15 @@ public class StudentViewAttendance extends JFrame {
 		panel.add(lblDaysAbsent);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
+		textField.setForeground(Color.RED);
 		textField.setBounds(345, 130, 121, 29);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
+		textField_1.setForeground(Color.RED);
 		textField_1.setColumns(10);
 		textField_1.setBounds(345, 182, 121, 29);
 		panel.add(textField_1);
@@ -109,6 +113,8 @@ public class StudentViewAttendance extends JFrame {
 		panel.add(lblEnterName);
 		
 		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
+		textField_2.setForeground(Color.RED);
 		textField_2.setColumns(10);
 		textField_2.setBounds(345, 68, 121, 29);
 		panel.add(textField_2);
