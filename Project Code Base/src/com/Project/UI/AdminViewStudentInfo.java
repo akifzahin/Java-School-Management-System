@@ -35,6 +35,7 @@ public class AdminViewStudentInfo extends JFrame {
 				try {
 					AdminViewStudentInfo frame = new AdminViewStudentInfo();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,6 +68,7 @@ public class AdminViewStudentInfo extends JFrame {
 				dispose();
 				AdminEntUI frame = new AdminEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 18));

@@ -98,6 +98,7 @@ public class AdminLoginUI extends JFrame {
 					dispose();
 					AdminEntUI frame = new AdminEntUI();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} else {
 					JOptionPane.showMessageDialog(btnNewButton, "Login Failed 😩" + " Try again!");
 				}
@@ -114,6 +115,7 @@ public class AdminLoginUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1.setBounds(555, 415, 98, 38);

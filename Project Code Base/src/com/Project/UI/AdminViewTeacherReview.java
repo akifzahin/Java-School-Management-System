@@ -35,6 +35,7 @@ public class AdminViewTeacherReview extends JFrame {
 				try {
 					AdminViewTeacherReview frame = new AdminViewTeacherReview();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,6 +68,7 @@ public class AdminViewTeacherReview extends JFrame {
 				dispose();
 				AdminEntUI frame = new AdminEntUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 18));
