@@ -184,9 +184,9 @@ public class AdminEntUI extends JFrame {
 		JButton btnNewButton_2_2 = new JButton("View Teacher Info");
 		btnNewButton_2_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				dispose();
-//				AdminViewTeacherInfo frame = new AdminViewTeacherInfo();
-//				frame.setVisible(true);
+				dispose();
+				AdminViewTeacherInfo frame = new AdminViewTeacherInfo();
+				frame.setVisible(true);
 				
 			}
 		});
@@ -197,9 +197,9 @@ public class AdminEntUI extends JFrame {
 		JButton btnNewButton_2_3 = new JButton("View Student Info");
 		btnNewButton_2_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				dispose();
-//				AdminViewStudentInfo frame = new AdminViewStudentInfo();
-//				frame.setVisibile(true);
+				dispose();
+				AdminViewStudentInfo frame = new AdminViewStudentInfo();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton_2_3.setFont(new Font("Microsoft JhengHei", Font.BOLD, 13));
@@ -232,16 +232,16 @@ public class AdminEntUI extends JFrame {
 		JButton btnNewButton_2_2_1 = new JButton("View Teacher Review");
 		btnNewButton_2_2_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				dispose();
-//				AdminViewTeacherReview frame = new AdminViewTeacherReview();
-//				frame.setVisible(true);
+				dispose();
+				AdminViewTeacherReview frame = new AdminViewTeacherReview();
+				frame.setVisible(true);
 				
 				
 				
 			}
 		});
 		btnNewButton_2_2_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 13));
-		btnNewButton_2_2_1.setBounds(391, 354, 207, 58);
+		btnNewButton_2_2_1.setBounds(389, 355, 207, 58);
 		contentPane.add(btnNewButton_2_2_1);
 		
 		JButton btnNewButton_2_2_2 = new JButton("Logout");
