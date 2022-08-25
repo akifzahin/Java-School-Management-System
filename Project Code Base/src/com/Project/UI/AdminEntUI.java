@@ -187,7 +187,7 @@ public class AdminEntUI extends JFrame {
 				dispose();
 				AdminViewTeacherInfo frame = new AdminViewTeacherInfo();
 				frame.setVisible(true);
-				
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 13));
@@ -200,6 +200,7 @@ public class AdminEntUI extends JFrame {
 				dispose();
 				AdminViewStudentInfo frame = new AdminViewStudentInfo();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_2_3.setFont(new Font("Microsoft JhengHei", Font.BOLD, 13));
@@ -235,7 +236,7 @@ public class AdminEntUI extends JFrame {
 				dispose();
 				AdminViewTeacherReview frame = new AdminViewTeacherReview();
 				frame.setVisible(true);
-				
+				frame.setResizable(false);
 				
 				
 			}
@@ -250,6 +251,7 @@ public class AdminEntUI extends JFrame {
 			dispose();
 			AdminLoginUI frame = new AdminLoginUI();
 			frame.setVisible(true);
+			frame.setResizable(false);
 			}
 		});
 		btnNewButton_2_2_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
@@ -262,6 +264,7 @@ public class AdminEntUI extends JFrame {
 			dispose();
 			WelcomeUI frame = new WelcomeUI();
 			frame.setVisible(true);
+			frame.setResizable(false);
 			
 			}
 		});
