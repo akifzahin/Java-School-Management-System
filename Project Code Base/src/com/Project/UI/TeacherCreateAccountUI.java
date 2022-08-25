@@ -136,6 +136,7 @@ public class TeacherCreateAccountUI extends JFrame {
 				dispose();
 				WelcomeUI frame = new WelcomeUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 15));
