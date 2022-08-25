@@ -16,7 +16,7 @@ public class Teacher extends User
 	private int yearsofExperience;
 	private String bloodGroup;
 	private Classroom classroom;
-	//private ArrayList<Student> studentList = new ArrayList<Student>();
+	
 	
 	public Teacher()
 	{
@@ -99,73 +99,8 @@ public class Teacher extends User
 	
 		
 			
-//	public void giveAttendance(Student student,int present, int absent) 
-//	{
-//		
-//		
-//			
-//			student.setDaysPresent(present);
-//			
-//			student.setDaysAbsent(absent);
-//	
-//		
-//	}
-	
-//	public void serialize(Teacher teacher)
-//	{
-//		String name = teacher.getFullName();
-//		try
-//		{
-//			String path = "src\\repository data\\teacherData\\"+name+".ser";
-//			FileOutputStream fileOutputStream = new FileOutputStream(path);
-//			ObjectOutputStream objOutputStream = new ObjectOutputStream(fileOutputStream);
-//			
-//			objOutputStream.writeObject(teacher);
-//			objOutputStream.close();
-//			
-//			fileOutputStream.close();
-//			
-//		}
-//		catch(IOException E)
-//		{
-//			E.printStackTrace();
-//		}
-//		
-//		System.out.println("Successfully Saved Student");
-//	}
 
-//	public Teacher deserialize(Teacher teacher)
-//	{	
-//		Teacher teacherObject = null;
-//		String name = teacher.getFullName();
-//		try
-//		{	
-//			String path = "src\\repository data\\teacherData\\"+name+".ser";
-//			FileInputStream fileInputStream = new FileInputStream(path);
-//			ObjectInputStream objInputStream = new ObjectInputStream(fileInputStream);
-//			
-//			teacherObject = (Teacher) objInputStream.readObject();
-//			
-//			objInputStream.close();
-//			fileInputStream.close();
-//			
-//		}
-//		catch(IOException E)
-//		{
-//			E.printStackTrace();
-//
-//		}
-//		catch(ClassNotFoundException E)
-//		{
-//			System.out.println("Teacher class not found!");
-//			E.printStackTrace();
-//
-//		}
-//		return teacherObject;
-//		
-//	}
-	
-	
+
 	
 	
 }
