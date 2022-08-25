@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.login.StudentEntities;
+
 
 import java.awt.Color;
 import javax.swing.JLabel;
