@@ -70,6 +70,7 @@ public class WelcomeUI extends JFrame {
 				dispose();
 				CreateAccountSeparationUI  frame = new 	CreateAccountSeparationUI ();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setBackground(new Color(204, 204, 255));
@@ -83,6 +84,7 @@ public class WelcomeUI extends JFrame {
 				dispose();
 				LoginSeparationUI frame = new LoginSeparationUI();
 				frame.setVisible(true);
+				frame.setResizable(false);
 			}
 		});
 		btnLoginUser.setBackground(new Color(204, 204, 255));
