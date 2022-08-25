@@ -89,19 +89,17 @@ public class AdminLoginUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				boolean matched = false;
-//				String UserId = textField.getText().toString();
-//				String password = passwordField.getText().toString();
-//				String str;
+
 				if(textField.getText().equals("Admin") && passwordField.getText().equals("1234") ) {
 					matched = true;
 				}
 				if (matched) {
-					JOptionPane.showMessageDialog(btnNewButton, "LogIn Successful !");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 🥳");
 					dispose();
 					AdminEntUI frame = new AdminEntUI();
 					frame.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(btnNewButton, "Can't LogIn :) " + "Try again!");
+					JOptionPane.showMessageDialog(btnNewButton, "Login Failed 😩" + " Try again!");
 				}
 			
 			}

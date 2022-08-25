@@ -87,7 +87,7 @@ public class AdminViewStudentInfo extends JFrame {
 					
 			BufferedReader br = new BufferedReader(fr);
 		
-			textArea.setFont(new Font("Tahoma", Font.BOLD, 15));
+			textArea.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
 					textArea.read(br,null);
 					br.close();
 					
