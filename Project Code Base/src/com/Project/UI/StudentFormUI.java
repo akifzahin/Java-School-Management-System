@@ -11,14 +11,6 @@ import com.Project.Entities.Student;
 import com.Project.Entities.Teacher;
 import com.Project.FileHandling.Serializer;
 
-import main.Adventure;
-import main.Author;
-import main.Book;
-import main.Comedy;
-import main.Fiction;
-import main.Genre;
-import main.Horror;
-import main.Thriller;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
