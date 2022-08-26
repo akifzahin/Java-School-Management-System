@@ -149,13 +149,13 @@ public class teacherFormUI extends JFrame {
 				fw.write(" Subject : "+subject.getText()  + "\n\n");
 				fw.write(" Blood Group : "+ bloodgroup.getText()+ "\n\n");
 				fw.write(" Designation : "+designation.getText()   + "\n\n");
-				fw.write(" YEears Of Experience : "+experience.getText() + "\n\n");
+				fw.write(" Years Of Experience : "+experience.getText() + "\n\n");
 				fw.write("---------------------------------------------------------------------------------------------"
 						+ "---------------------------------------------------------------------------------------------"+"\n");
 				fw.close();
-				JOptionPane.showMessageDialog(null, " Added Information to Teacher Database ");	
+				//JOptionPane.showMessageDialog(null, " Added Information to Teacher Database ");	
 			} catch (IOException e1) {
-				JOptionPane.showMessageDialog(null, "can't add info to Teacher Database ");				
+				//JOptionPane.showMessageDialog(null, "can't add info to Teacher Database ");				
 				e1.printStackTrace();
 			}
 	

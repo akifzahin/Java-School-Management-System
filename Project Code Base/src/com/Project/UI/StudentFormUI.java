@@ -183,9 +183,9 @@ public class StudentFormUI extends JFrame {
 					fw.write("---------------------------------------------------------------------------------------------"
 							+ "---------------------------------------------------------------------------------------------"+"\n");
 					fw.close();
-					JOptionPane.showMessageDialog(null, " Added Information to Student Database ");	
+					//JOptionPane.showMessageDialog(null, " Added Information to Student Database ");	
 				} catch (IOException e1) {
-					JOptionPane.showMessageDialog(null, "can't add info to Student Database ");				
+					//JOptionPane.showMessageDialog(null, "can't add info to Student Database ");				
 					e1.printStackTrace();
 				}
 			}
