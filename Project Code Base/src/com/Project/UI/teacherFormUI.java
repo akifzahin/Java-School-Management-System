@@ -167,6 +167,7 @@ public class teacherFormUI extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		name = new JTextField();
+		name.setFont(new Font("Tahoma", Font.BOLD, 15));
 		name.setColumns(10);
 		name.setBounds(184, 92, 228, 27);
 		contentPane.add(name);
@@ -229,51 +230,61 @@ public class teacherFormUI extends JFrame {
 		contentPane.add(lblNewLabel_1_3);
 		
 		email = new JTextField();
+		email.setFont(new Font("Tahoma", Font.BOLD, 15));
 		email.setColumns(10);
 		email.setBounds(184, 132, 228, 27);
 		contentPane.add(email);
 		
 		address = new JTextField();
+		address.setFont(new Font("Tahoma", Font.BOLD, 15));
 		address.setColumns(10);
 		address.setBounds(184, 170, 228, 27);
 		contentPane.add(address);
 		
 		birthdate = new JTextField();
+		birthdate.setFont(new Font("Tahoma", Font.BOLD, 15));
 		birthdate.setColumns(10);
 		birthdate.setBounds(184, 208, 112, 27);
 		contentPane.add(birthdate);
 		
 		age = new JTextField();
+		age.setFont(new Font("Tahoma", Font.BOLD, 15));
 		age.setColumns(10);
 		age.setBounds(184, 250, 112, 27);
 		contentPane.add(age);
 		
 		gender = new JTextField();
+		gender.setFont(new Font("Tahoma", Font.BOLD, 15));
 		gender.setColumns(10);
 		gender.setBounds(184, 295, 112, 27);
 		contentPane.add(gender);
 		
 		phonenumber = new JTextField();
+		phonenumber.setFont(new Font("Tahoma", Font.BOLD, 15));
 		phonenumber.setColumns(10);
 		phonenumber.setBounds(184, 340, 228, 27);
 		contentPane.add(phonenumber);
 		
 		subject = new JTextField();
+		subject.setFont(new Font("Tahoma", Font.BOLD, 15));
 		subject.setColumns(10);
 		subject.setBounds(184, 385, 112, 27);
 		contentPane.add(subject);
 		
 		bloodgroup = new JTextField();
+		bloodgroup.setFont(new Font("Tahoma", Font.BOLD, 15));
 		bloodgroup.setColumns(10);
 		bloodgroup.setBounds(184, 430, 112, 27);
 		contentPane.add(bloodgroup);
 		
 		designation = new JTextField();
+		designation.setFont(new Font("Tahoma", Font.BOLD, 15));
 		designation.setColumns(10);
 		designation.setBounds(184, 475, 228, 27);
 		contentPane.add(designation);
 		
 		experience = new JTextField();
+		experience.setFont(new Font("Tahoma", Font.BOLD, 15));
 		experience.setColumns(10);
 		experience.setBounds(184, 520, 118, 27);
 		contentPane.add(experience);

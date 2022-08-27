@@ -69,20 +69,20 @@ public class StudentViewAttendance extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 51, 51));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 20));
-		lblNewLabel.setBounds(36, 117, 197, 47);
+		lblNewLabel.setBounds(57, 117, 197, 47);
 		panel.add(lblNewLabel);
 		
 		JLabel lblDaysAbsent = new JLabel("Days Absent:");
 		lblDaysAbsent.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDaysAbsent.setForeground(new Color(255, 51, 51));
 		lblDaysAbsent.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 20));
-		lblDaysAbsent.setBounds(36, 174, 197, 47);
+		lblDaysAbsent.setBounds(57, 174, 197, 47);
 		panel.add(lblDaysAbsent);
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		textField.setForeground(Color.RED);
-		textField.setBounds(345, 130, 121, 29);
+		textField.setBounds(264, 128, 121, 29);
 		panel.add(textField);
 		textField.setColumns(10);
 		
@@ -90,7 +90,7 @@ public class StudentViewAttendance extends JFrame {
 		textField_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		textField_1.setForeground(Color.RED);
 		textField_1.setColumns(10);
-		textField_1.setBounds(345, 182, 121, 29);
+		textField_1.setBounds(264, 185, 121, 29);
 		panel.add(textField_1);
 		
 		JButton btnNewButton = new JButton("Back");
@@ -110,14 +110,14 @@ public class StudentViewAttendance extends JFrame {
 		lblEnterName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnterName.setForeground(new Color(255, 51, 51));
 		lblEnterName.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 20));
-		lblEnterName.setBounds(36, 60, 197, 47);
+		lblEnterName.setBounds(57, 59, 197, 47);
 		panel.add(lblEnterName);
 		
 		textField_2 = new JTextField();
 		textField_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
 		textField_2.setForeground(Color.RED);
 		textField_2.setColumns(10);
-		textField_2.setBounds(345, 68, 121, 29);
+		textField_2.setBounds(264, 71, 121, 29);
 		panel.add(textField_2);
 		
 		JButton btnView = new JButton("View");

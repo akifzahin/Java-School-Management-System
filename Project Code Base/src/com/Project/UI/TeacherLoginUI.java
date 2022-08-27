@@ -76,11 +76,13 @@ public class TeacherLoginUI extends JFrame {
 		contentPane.add(lblPassword);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField.setColumns(10);
 		textField.setBounds(433, 242, 263, 38);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		passwordField.setBounds(433, 303, 263, 38);
 		contentPane.add(passwordField);
 		

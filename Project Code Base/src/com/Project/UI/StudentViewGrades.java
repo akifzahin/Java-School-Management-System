@@ -71,15 +71,17 @@ public class StudentViewGrades extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 51, 51));
 		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(49, 42, 177, 44);
+		lblNewLabel.setBounds(49, 55, 177, 44);
 		panel.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(302, 52, 108, 33);
+		textField.setForeground(Color.RED);
+		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField.setBounds(236, 63, 161, 33);
 		panel.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblEnter = new JLabel("Maths");
+		JLabel lblEnter = new JLabel("Maths  :");
 		lblEnter.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnter.setForeground(new Color(255, 51, 51));
 		lblEnter.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
@@ -87,23 +89,27 @@ public class StudentViewGrades extends JFrame {
 		panel.add(lblEnter);
 		
 		textField_1 = new JTextField();
+		textField_1.setForeground(Color.RED);
+		textField_1.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField_1.setColumns(10);
-		textField_1.setBounds(302, 120, 108, 33);
+		textField_1.setBounds(236, 118, 108, 33);
 		panel.add(textField_1);
 		
 		textField_2 = new JTextField();
+		textField_2.setForeground(Color.RED);
+		textField_2.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField_2.setColumns(10);
-		textField_2.setBounds(302, 168, 108, 33);
+		textField_2.setBounds(236, 172, 108, 33);
 		panel.add(textField_2);
 		
-		JLabel lblScience = new JLabel("Science");
+		JLabel lblScience = new JLabel("Science :");
 		lblScience.setHorizontalAlignment(SwingConstants.CENTER);
 		lblScience.setForeground(new Color(255, 51, 51));
 		lblScience.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
 		lblScience.setBounds(25, 164, 201, 44);
 		panel.add(lblScience);
 		
-		JLabel lblEnglish = new JLabel("English");
+		JLabel lblEnglish = new JLabel("English :");
 		lblEnglish.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnglish.setForeground(new Color(255, 51, 51));
 		lblEnglish.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
@@ -111,8 +117,10 @@ public class StudentViewGrades extends JFrame {
 		panel.add(lblEnglish);
 		
 		textField_3 = new JTextField();
+		textField_3.setForeground(Color.RED);
+		textField_3.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField_3.setColumns(10);
-		textField_3.setBounds(302, 228, 108, 33);
+		textField_3.setBounds(236, 226, 108, 33);
 		panel.add(textField_3);
 		
 		JButton btnNewButton = new JButton("View");

@@ -84,6 +84,7 @@ public class StudentFormUI extends JFrame {
 		
 		name = new JTextField();
 		name.setBounds(183, 79, 228, 27);
+		name.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		JPanel.add(name);
 		name.setColumns(10);
 		
@@ -202,16 +203,19 @@ public class StudentFormUI extends JFrame {
 		JPanel.add(rdbtnNewRadioButton_2);
 		
 		email = new JTextField();
+		email.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		email.setColumns(10);
 		email.setBounds(183, 120, 228, 27);
 		JPanel.add(email);
 		
 		address = new JTextField();
+		address.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		address.setColumns(10);
 		address.setBounds(183, 161, 228, 27);
 		JPanel.add(address);
 		
 		birthdate = new JTextField();
+		birthdate.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		birthdate.setColumns(10);
 		birthdate.setBounds(183, 209, 112, 27);
 		JPanel.add(birthdate);
@@ -242,21 +246,25 @@ public class StudentFormUI extends JFrame {
 		
 		age = new JTextField();
 		age.setColumns(10);
+		age.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		age.setBounds(183, 247, 112, 27);
 		JPanel.add(age);
 		
 		gender = new JTextField();
+		gender.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		gender.setColumns(10);
 		gender.setBounds(183, 295, 112, 23);
 		JPanel.add(gender);
 		
 		phonenumber = new JTextField();
 		phonenumber.setColumns(10);
+		phonenumber.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		phonenumber.setBounds(183, 338, 228, 27);
 		JPanel.add(phonenumber);
 		
 		standard = new JTextField();
 		standard.setColumns(10);
+		standard.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		standard.setBounds(183, 383, 112, 27);
 		JPanel.add(standard);
 		
@@ -280,16 +288,19 @@ public class StudentFormUI extends JFrame {
 		
 		guardianname = new JTextField();
 		guardianname.setColumns(10);
+		guardianname.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		guardianname.setBounds(183, 476, 228, 27);
 		JPanel.add(guardianname);
 		
 		guardiannumber = new JTextField();
 		guardiannumber.setColumns(10);
+		guardiannumber.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		guardiannumber.setBounds(183, 512, 228, 27);
 		JPanel.add(guardiannumber);
 		
 		id = new JTextField();
 		id.setColumns(10);
+		id.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		id.setBounds(183, 431, 112, 27);
 		JPanel.add(id);
 	}

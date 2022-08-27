@@ -75,10 +75,12 @@ public class TeacherCreateAccountUI extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
+		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField.setBounds(393, 186, 263, 38);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		passwordField.setBounds(393, 258, 263, 38);
 		contentPane.add(passwordField);
 		
