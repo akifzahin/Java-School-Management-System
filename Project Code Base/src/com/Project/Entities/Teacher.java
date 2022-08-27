@@ -15,7 +15,7 @@ public class Teacher extends User
 	private int salary;
 	private int yearsofExperience;
 	private String bloodGroup;
-	private Classroom classroom;
+	
 	
 	
 	public Teacher()
