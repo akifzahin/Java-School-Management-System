@@ -12,6 +12,7 @@ public class TestMain {
 	{
 		WelcomeUI frame = new WelcomeUI();
 		frame.setVisible(true);
+		frame.setResizable(false);
 		
 	}
 

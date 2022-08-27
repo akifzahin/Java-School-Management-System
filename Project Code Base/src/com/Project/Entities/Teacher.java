@@ -18,12 +18,7 @@ public class Teacher extends User
 	
 	
 	
-	public Teacher()
-	{
-		super();
-		
-	}
-
+	
 
 	public Teacher(String fullName,String email, String birthDate, String gender, int age,
 			String phoneNumber, String address, String subject, String designation, 

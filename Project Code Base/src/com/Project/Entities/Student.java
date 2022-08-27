@@ -17,26 +17,15 @@ public class Student extends User
 	private String mathsGrade,scienceGrade,englishGrade;
 	
 	
-	public String getMathsGrade() {
-		return mathsGrade;
-	}
-
-
-
-	public Student()
-	{
-		super();
-	}
-	
-	public Student(String fullName)
-	{
-		
-	}
 	
 
 
-	public Student(String email, String birthDate, String gender, String fullName,int age,
-			String phoneNumber, String address, String standard, String guardianName, String guardianNumber, String id)
+
+	public Student(String email, String birthDate,
+			String gender, String fullName,int age,
+			String phoneNumber, String address, 
+			String standard, String guardianName, 
+			String guardianNumber, String id)
 	{
 		super(email, birthDate, gender,fullName, age, phoneNumber, address);
 		this.standard = standard;
@@ -100,12 +89,7 @@ public class Student extends User
 		return daysPresent;
 	}
 	
-	public void printAttendance()
-	{
-		System.out.println("Days Present: " +daysPresent+"\nDays Absent: " +daysAbsent);
-	}
-
-
+	
 	public void setDaysPresent(int daysPresent) {
 		this.daysPresent = daysPresent;
 	}
@@ -137,17 +121,6 @@ public class Student extends User
 	}
 	
 	
-	public void viewAttendance()
-	{
-		System.out.println("Days Present: " +getDaysPresent() );
-		System.out.println("Days Absent: " +getDaysAbsent() );
-	}
-	
-	public void viewResult()
-	{
-		System.out.println("Your grades:\nMaths: " +getMathsGrade()+"\nScience: "+getScienceGrade()+"\nEnglish: "+getEnglishGrade() );
-		
-	}
 	
 	public void setMathsGrade(String mathsGrade) {
 		this.mathsGrade = mathsGrade;
@@ -168,7 +141,10 @@ public class Student extends User
 	public void setEnglishGrade(String englishGrade) {
 		this.englishGrade = englishGrade;
 	}
-
+	
+	public String getMathsGrade() {
+		return mathsGrade;
+	}
 
 
 

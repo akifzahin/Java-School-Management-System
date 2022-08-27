@@ -19,17 +19,13 @@ public int getNumberofStudents() {
 	return numberofStudents;
 }
 
-//public void setNumberofStudents(int numberofStudents) {
-//	Classroom.numberofStudents = numberofStudents;
-//}
+
 
 public int getNumberofTeachers() {
 	return numberofTeachers;
 }
 
-//public void setNumberofTeachers(int numberofTeachers) {
-//	Classroom.numberofTeachers = numberofTeachers;
-//}
+
 public void addToStudentList(Student student)
 {
 	this.studentList.add(student);
@@ -45,9 +41,7 @@ public ArrayList<Student> getStudentList()
 	return studentList;
 }
 
-//public void setStudentList(ArrayList<Student> students) {
-//	this.studentList = students;
-//}
+
 
 public ArrayList<Teacher> getTeacherList() {
 	return teacherList;
@@ -61,9 +55,7 @@ public void deleteFromTeacherList(Teacher teacher)
 {
 	this.teacherList.remove(teacher);
 }
-//public void setTeacherList(ArrayList<Teacher> teachers) {
-//	this.teacherList = teachers;
-//}
+
 
 
 }
