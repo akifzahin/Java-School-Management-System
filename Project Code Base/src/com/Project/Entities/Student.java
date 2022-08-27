@@ -131,8 +131,8 @@ public class Student extends User
 			+getAddress()+"\n\n  Birth Date: "+getBirthDate()+"\n\n  Age: "+getAge()+"\n\n  Gender: "+getGender()+"\n\n  "
 					+ "Phone Number: "+getPhoneNumber()+
 			"\n\n  Standard: "+getStandard()+"\n\n  ID: "+getId()+"\n\n  Guardian Name: "+getGuardianName()+"\n\n  Guardian Number: "
-		  +getGuardianNumber()
-			+"";
+		  +getGuardianNumber()+"\n\n Attendance:- \n\n Days Present: " +getDaysPresent()+"\n\n Days Absent: " +getDaysAbsent()+
+		  "\n\n Grades: \n\n Maths Grade: "+getMathsGrade() +"\n\n Science Grade: "+getScienceGrade() +"\n\n English Grade: " +getEnglishGrade()+"";
 		return info;
 	}
 	
