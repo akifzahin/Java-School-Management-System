@@ -73,15 +73,17 @@ public class TeacherPublishGrades extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 51, 51));
 		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(49, 42, 177, 44);
+		lblNewLabel.setBounds(38, 42, 177, 44);
 		panel.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(302, 52, 108, 33);
+		textField.setForeground(Color.RED);
+		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField.setBounds(211, 50, 170, 33);
 		panel.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblEnter = new JLabel("Maths");
+		JLabel lblEnter = new JLabel("Maths :");
 		lblEnter.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnter.setForeground(new Color(255, 51, 51));
 		lblEnter.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
@@ -89,14 +91,16 @@ public class TeacherPublishGrades extends JFrame {
 		panel.add(lblEnter);
 		
 		textField_1 = new JTextField();
+		textField_1.setForeground(Color.RED);
 		textField_1.setColumns(10);
-		textField_1.setBounds(302, 120, 108, 33);
+		textField_1.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField_1.setBounds(246, 118, 108, 33);
 		panel.add(textField_1);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"A", "B","C","D","F"}));
-		comboBox.setBounds(482, 125, 70, 21);
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"A", "A-","B","C","D","F"}));
+		comboBox.setBounds(418, 125, 70, 21);
 		panel.add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -106,9 +110,9 @@ public class TeacherPublishGrades extends JFrame {
 		
 		
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"A", "B", "C", "D", "F"}));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"A", "A-","B", "C", "D", "F"}));
 		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		comboBox_1.setBounds(482, 173, 70, 21);
+		comboBox_1.setBounds(418, 180, 70, 21);
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField_2.setText(comboBox_1.getSelectedItem().toString());
@@ -117,18 +121,20 @@ public class TeacherPublishGrades extends JFrame {
 		panel.add(comboBox_1);
 		
 		textField_2 = new JTextField();
+		textField_2.setForeground(Color.RED);
 		textField_2.setColumns(10);
-		textField_2.setBounds(302, 168, 108, 33);
+		textField_2.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField_2.setBounds(246, 173, 108, 33);
 		panel.add(textField_2);
 		
-		JLabel lblScience = new JLabel("Science");
+		JLabel lblScience = new JLabel("Science :");
 		lblScience.setHorizontalAlignment(SwingConstants.CENTER);
 		lblScience.setForeground(new Color(255, 51, 51));
 		lblScience.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
 		lblScience.setBounds(25, 164, 201, 44);
 		panel.add(lblScience);
 		
-		JLabel lblEnglish = new JLabel("English");
+		JLabel lblEnglish = new JLabel("English :");
 		lblEnglish.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnglish.setForeground(new Color(255, 51, 51));
 		lblEnglish.setFont(new Font("Microsoft JhengHei", Font.BOLD, 19));
@@ -136,14 +142,16 @@ public class TeacherPublishGrades extends JFrame {
 		panel.add(lblEnglish);
 		
 		textField_3 = new JTextField();
+		textField_3.setForeground(Color.RED);
 		textField_3.setColumns(10);
-		textField_3.setBounds(302, 228, 108, 33);
+		textField_3.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField_3.setBounds(246, 226, 108, 33);
 		panel.add(textField_3);
 		
 		JComboBox comboBox_1_1 = new JComboBox();
-		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"A", "B", "C", "D", "F"}));
+		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"A","A-", "B", "C", "D", "F"}));
 		comboBox_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		comboBox_1_1.setBounds(482, 234, 70, 21);
+		comboBox_1_1.setBounds(418, 233, 70, 21);
 		comboBox_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField_3.setText(comboBox_1_1.getSelectedItem().toString());

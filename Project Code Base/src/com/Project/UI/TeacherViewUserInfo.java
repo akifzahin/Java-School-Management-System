@@ -74,7 +74,8 @@ public class TeacherViewUserInfo extends JFrame {
 		textField = new JTextField();
 		textField.setForeground(new Color(255, 51, 102));
 		textField.setBackground(new Color(204, 255, 255));
-		textField.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		//textField.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField.setBounds(285, 42, 192, 28);
 		panel.add(textField);
 		textField.setColumns(10);
@@ -85,9 +86,10 @@ public class TeacherViewUserInfo extends JFrame {
 		panel.add(scrollPane);
 	
 		JTextArea textArea = new JTextArea();
+	
 		textArea.setForeground(new Color(255, 51, 102));
 		scrollPane.setViewportView(textArea);
-		textArea.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		textArea.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textArea.setBackground(new Color(204, 255, 255));
 		
 		JButton btnNewButton = new JButton("View");
