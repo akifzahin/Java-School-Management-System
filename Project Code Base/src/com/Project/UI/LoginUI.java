@@ -73,6 +73,7 @@ public class LoginUI extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
+		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		textField.setBounds(414, 239, 263, 38);
 		contentPane.add(textField);
 		
@@ -82,6 +83,7 @@ public class LoginUI extends JFrame {
 		contentPane.add(lblPassword);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("TAHOMA", Font.BOLD, 15));
 		passwordField.setBounds(414, 288, 263, 38);
 		contentPane.add(passwordField);
 		

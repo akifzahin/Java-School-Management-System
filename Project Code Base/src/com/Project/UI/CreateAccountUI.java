@@ -80,11 +80,13 @@ public class CreateAccountUI extends JFrame {
 		contentPane.add(lblPassword);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField.setColumns(10);
 		textField.setBounds(435, 226, 263, 38);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		passwordField.setBounds(435, 297, 263, 38);
 		contentPane.add(passwordField);
 		
