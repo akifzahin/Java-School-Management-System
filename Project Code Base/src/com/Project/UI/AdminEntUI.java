@@ -104,7 +104,7 @@ public class AdminEntUI extends JFrame {
 		JButton btnDeleteTeacher = new JButton("Delete Teacher");
 		btnDeleteTeacher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String inputName = JOptionPane.showInputDialog("Please enter the student's name: ");
+				String inputName = JOptionPane.showInputDialog("Please enter the teacher's name: ");
 				String path = "src\\repository data\\teacherData\\"+inputName+".ser";
 				File file = new File(path);
 				
