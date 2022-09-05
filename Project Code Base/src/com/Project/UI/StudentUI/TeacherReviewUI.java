@@ -1,11 +1,15 @@
-package com.Project.UI;
-
+package com.Project.UI.StudentUI;
+import com.Project.UI.SystemUI.*;
+import com.Project.UI.StudentUI.*;
+import com.Project.UI.AdminUI.*;
+import com.Project.UI.TeacherUI.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

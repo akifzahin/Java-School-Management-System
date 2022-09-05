@@ -1,22 +1,22 @@
-package com.Project.UI;
+package com.Project.UI.TeacherUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.util.Calendar;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JTextArea;
-import javax.swing.JLabel;
-import java.awt.Font;
-import java.util.Calendar;
-
+import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
-public class ViewFeesUI extends JFrame {
+public class ViewSalaryUI extends JFrame {
 
 	private JPanel contentPane;
 
@@ -27,7 +27,7 @@ public class ViewFeesUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ViewFeesUI frame = new ViewFeesUI();
+					ViewSalaryUI frame = new ViewSalaryUI();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -40,26 +40,20 @@ public class ViewFeesUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ViewFeesUI() {
+	public ViewSalaryUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1055, 606);
+		setBounds(100, 100, 1057, 600);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 153));
+		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setForeground(new Color(255, 51, 102));
-		textArea.setBackground(new Color(255, 255, 153));
-		textArea.setBounds(53, 51, 946, 457);
+		textArea.setBackground(new Color(204, 255, 255));
+		textArea.setBounds(66, 50, 932, 452);
 		contentPane.add(textArea);
-		
-		JLabel lblNewLabel = new JLabel("Fees Information");
-		lblNewLabel.setForeground(new Color(255, 51, 102));
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel.setBounds(396, 11, 201, 28);
-		contentPane.add(lblNewLabel);
 		Calendar calendar = Calendar.getInstance();
 		String[] month = new String[] {"January", "February", "March", "April", "May", "June",
 				"July", "August","September", "October", "November", "December" };
@@ -68,8 +62,8 @@ public class ViewFeesUI extends JFrame {
 				+ ".........................................................................."
 				+ "..........................................................................."
 				+ "..........................................................................."+ 
-				"\n\n\t\t*Your Fees for month of "+ Month + " is 12,000 BDT." + "\n\n"
-				+ "\t\t* You can Pay your Fees at the following banking system \n\n"+
+				"\n\n\t\t*Your Salary for month of "+ Month + " is 75,000 BDT." + "\n\n"
+				+ "\t\t* You can withdraw your Salary at the following banking system \n\n"+
 				"\t\t\t# Bkash(Mobile Banking)\n\n"
 				+ "\t\t\t# SouthEast Bank\n\n"
 				+ "\t\t\t# UCL Bank\n\n"
@@ -87,15 +81,20 @@ public class ViewFeesUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				StudentEntUI frame = new StudentEntUI();
+				TeacherEntUI frame = new TeacherEntUI();
 				frame.setVisible(true);
 				frame.setResizable(false);
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 51, 51));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnNewButton.setBounds(453, 519, 100, 37);
+		btnNewButton.setBounds(449, 513, 100, 37);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("Salary Information");
+		lblNewLabel.setForeground(new Color(255, 51, 102));
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel.setBounds(377, 11, 201, 28);
+		contentPane.add(lblNewLabel);
 	}
-
 }

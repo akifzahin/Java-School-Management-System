@@ -1,10 +1,5 @@
 package com.Project.Testing;
-import com.Project.Repository.*;
-import com.Project.UI.WelcomeUI;
-import com.Project.Entities.*;
-import com.Project.FileHandling.Deserializer;
-import com.Project.FileHandling.Serializer;
-import java.io.*;
+import com.Project.UI.SystemUI.WelcomeUI;
 
 public class TestMain {
 

@@ -1,5 +1,8 @@
-package com.Project.UI;
-
+package com.Project.UI.TeacherUI;
+import com.Project.UI.SystemUI.*;
+import com.Project.UI.StudentUI.*;
+import com.Project.UI.AdminUI.*;
+import com.Project.UI.TeacherUI.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 

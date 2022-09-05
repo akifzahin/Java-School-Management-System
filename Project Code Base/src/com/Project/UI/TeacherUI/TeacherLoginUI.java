@@ -1,5 +1,8 @@
-package com.Project.UI;
-
+package com.Project.UI.TeacherUI;
+import com.Project.UI.SystemUI.*;
+import com.Project.UI.StudentUI.*;
+import com.Project.UI.AdminUI.*;
+import com.Project.UI.TeacherUI.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -22,7 +25,7 @@ import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
-public class AdminLoginUI extends JFrame {
+public class TeacherLoginUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -35,7 +38,7 @@ public class AdminLoginUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminLoginUI frame = new AdminLoginUI();
+					TeacherLoginUI frame = new TeacherLoginUI();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -48,7 +51,7 @@ public class AdminLoginUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdminLoginUI() {
+	public TeacherLoginUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1035, 647);
 		contentPane = new JPanel();
@@ -57,7 +60,7 @@ public class AdminLoginUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("Admin Login Page");
+		JLabel lblNewLabel_2 = new JLabel("Teacher Login Page");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 40));
 		lblNewLabel_2.setBounds(213, 91, 559, 72);
@@ -91,17 +94,37 @@ public class AdminLoginUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				boolean matched = false;
+				String UserId = textField.getText().toString();
+				String password = passwordField.getText().toString();
+				try {
+					FileReader fr = new FileReader(
+							"src\\login data\\teacherLoginData.txt");
+					BufferedReader br = new BufferedReader(fr);
+					String str;
+					try {
+						while ((str = br.readLine()) != null) {
+							if (str.equals(UserId + "\t" + password)) {
+								matched = true;
+								break;
+							}
+						}
+						fr.close();
+					} catch (IOException e1) {
 
-				if(textField.getText().equals("Admin") && passwordField.getText().equals("1234") ) {
-					matched = true;
+						e1.printStackTrace();
+					}
+				} catch (FileNotFoundException e1) {
+
+					e1.printStackTrace();
 				}
 				if (matched) {
 					JOptionPane.showMessageDialog(btnNewButton, "Login Successful! 😍");
 					dispose();
-					AdminEntUI frame = new AdminEntUI();
+					TeacherEntUI frame = new TeacherEntUI();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} else {
+					
 					JOptionPane.showMessageDialog(btnNewButton, "Login Failed 😩" + " Try again!");
 				}
 			
@@ -122,5 +145,18 @@ public class AdminLoginUI extends JFrame {
 		});
 		btnNewButton_1.setBounds(555, 415, 98, 38);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("Sign Up");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			dispose();
+			CreateAccountSeparationUI frame = new CreateAccountSeparationUI();
+			frame.setVisible(true);
+			frame.setResizable(false);
+			}
+		});
+		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 14));
+		btnNewButton_1_1.setBounds(499, 487, 98, 38);
+		contentPane.add(btnNewButton_1_1);
 	}
 }

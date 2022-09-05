@@ -1,4 +1,4 @@
-package com.Project.UI;
+package com.Project.UI.StudentUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

@@ -1,4 +1,4 @@
-package com.Project.UI;
+package com.Project.UI.AdminUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -21,8 +21,9 @@ import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
-public class TeacherViewUserInfo extends JFrame {
+public class AdminSearchTeacher extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -34,7 +35,7 @@ public class TeacherViewUserInfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TeacherViewUserInfo frame = new TeacherViewUserInfo();
+					AdminSearchTeacher frame = new AdminSearchTeacher();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -47,35 +48,34 @@ public class TeacherViewUserInfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TeacherViewUserInfo() {
-		setBackground(new Color(204, 255, 255));
+	public AdminSearchTeacher() {
+		setBackground(SystemColor.inactiveCaption);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 763, 594);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(204, 255, 255));
+		contentPane.setBackground(SystemColor.inactiveCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		setTitle("Teacher View Information");
+		setTitle("Search Teacher Information");
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(204, 255, 255));
+		panel.setBackground(SystemColor.inactiveCaption);
 		panel.setBounds(8, 10, 733, 534);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Enter Name :");
-		lblNewLabel.setForeground(new Color(255, 51, 102));
+		JLabel lblNewLabel = new JLabel("Enter Teacher Name :");
+		lblNewLabel.setForeground(new Color(51, 102, 204));
 		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(112, 31, 178, 42);
+		lblNewLabel.setBounds(57, 31, 233, 42);
 		panel.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setForeground(new Color(255, 51, 102));
-		textField.setBackground(new Color(204, 255, 255));
-		//textField.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		textField.setFont(new Font("TAHOMA", Font.BOLD, 15));
+		textField.setForeground(SystemColor.textHighlight);
+		textField.setBackground(SystemColor.inactiveCaption);
+		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField.setBounds(285, 42, 192, 28);
 		panel.add(textField);
 		textField.setColumns(10);
@@ -86,11 +86,10 @@ public class TeacherViewUserInfo extends JFrame {
 		panel.add(scrollPane);
 	
 		JTextArea textArea = new JTextArea();
-	
-		textArea.setForeground(new Color(255, 51, 102));
+		textArea.setForeground(SystemColor.textHighlight);
 		scrollPane.setViewportView(textArea);
-		textArea.setFont(new Font("TAHOMA", Font.BOLD, 15));
-		textArea.setBackground(new Color(204, 255, 255));
+		textArea.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textArea.setBackground(SystemColor.inactiveCaption);
 		
 		JButton btnNewButton = new JButton("View");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -117,7 +116,7 @@ public class TeacherViewUserInfo extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				TeacherEntUI frame = new TeacherEntUI();
+				AdminEntUI frame = new AdminEntUI();
 				frame.setVisible(true);
 				frame.setResizable(false);
 			}

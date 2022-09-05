@@ -1,13 +1,4 @@
-package com.Project.UI;
-
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-
+package com.Project.UI.StudentUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -31,7 +22,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.awt.event.ActionEvent;
 
-public class TeacherViewStudentInfo extends JFrame {
+public class StudentViewUserInfo extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtEnterName;
@@ -43,7 +34,7 @@ public class TeacherViewStudentInfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TeacherViewStudentInfo frame = new TeacherViewStudentInfo();
+					StudentViewUserInfo frame = new StudentViewUserInfo();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -56,34 +47,35 @@ public class TeacherViewStudentInfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TeacherViewStudentInfo  () {
+	public StudentViewUserInfo() {
 		setTitle("View Information");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(600, 200, 700, 517);
+		setBounds(600, 200, 700, 573);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(204, 255, 255));
+		contentPane.setBackground(new Color(255, 255, 153));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(204, 255, 255));
-		panel.setBounds(8, 10, 670, 443);
+		panel.setBackground(new Color(255, 255, 153));
+		panel.setBounds(8, 10, 670, 513);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		txtEnterName = new JTextField();
-		txtEnterName.setForeground(Color.RED);
-		txtEnterName.setFont(new Font("Microsoft JhengHei", Font.BOLD, 14));
-		txtEnterName.setBounds(378, 24, 126, 27);
+		txtEnterName.setForeground(new Color(255, 51, 102));
+		txtEnterName.setBackground(new Color(255, 255, 204));
+		txtEnterName.setFont(new Font("Tahoma", Font.BOLD, 15));
+		txtEnterName.setBounds(274, 22, 160, 27);
 		panel.add(txtEnterName);
 		txtEnterName.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Enter Student Name:");
-		lblNewLabel.setForeground(Color.RED);
-		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 20));
+		JLabel lblNewLabel = new JLabel("Enter Name :");
+		lblNewLabel.setForeground(new Color(255, 51, 102));
+		lblNewLabel.setFont(new Font("Microsoft JhengHei", Font.BOLD, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(71, 10, 258, 50);
+		lblNewLabel.setBounds(122, 15, 160, 37);
 		panel.add(lblNewLabel);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -91,14 +83,13 @@ public class TeacherViewStudentInfo extends JFrame {
 		panel.add(scrollPane);
 		
 		JTextArea textArea = new JTextArea();
+		textArea.setForeground(new Color(255, 51, 102));
+		textArea.setBackground(new Color(255, 255, 153));
 		textArea.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
-		textArea.setForeground(Color.RED);
-		textArea.setBackground(new Color(204, 255, 255));
 		scrollPane.setViewportView(textArea);
 		
-		JButton btnNewButton = new JButton("View");
-		btnNewButton.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 10));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnNewButton_2 = new JButton("View");
+		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String path = "src\\repository data\\studentData\\" +txtEnterName.getText()+".ser";
 				File file = new File(path);
@@ -112,21 +103,22 @@ public class TeacherViewStudentInfo extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(353, 75, 83, 21);
-		panel.add(btnNewButton);
+		btnNewButton_2.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		btnNewButton_2.setBounds(304, 59, 98, 33);
+		panel.add(btnNewButton_2);
 		
-		JButton btnNewButton_1 = new JButton("Back");
-		btnNewButton_1.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 10));
-		btnNewButton_1.setBounds(460, 75, 83, 21);
-		panel.add(btnNewButton_1);
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_1_1 = new JButton("Back");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				TeacherEntUI frame = new TeacherEntUI();
+				StudentEntUI frame = new StudentEntUI();
 				frame.setVisible(true);
 				frame.setResizable(false);
 			}
 		});
+		btnNewButton_1_1.setFont(new Font("Microsoft JhengHei", Font.BOLD, 15));
+		btnNewButton_1_1.setBounds(304, 470, 98, 33);
+		panel.add(btnNewButton_1_1);
 		
 		
 	}

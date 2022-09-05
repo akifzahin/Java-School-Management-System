@@ -1,4 +1,4 @@
-package com.Project.UI;
+package com.Project.UI.SystemUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -6,6 +6,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.Project.UI.AdminUI.AdminLoginUI;
+import com.Project.UI.StudentUI.LoginUI;
+import com.Project.UI.TeacherUI.TeacherLoginUI;
+
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;

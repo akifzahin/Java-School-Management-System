@@ -1,4 +1,4 @@
-package com.Project.UI;
+package com.Project.UI.AdminUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -22,7 +22,7 @@ import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class AdminViewTeacherInfo extends JFrame {
+public class AdminViewTeacherReview extends JFrame {
 
 	private JPanel contentPane;
 
@@ -33,7 +33,7 @@ public class AdminViewTeacherInfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminViewTeacherInfo frame = new AdminViewTeacherInfo();
+					AdminViewTeacherReview frame = new AdminViewTeacherReview();
 					frame.setVisible(true);
 					frame.setResizable(false);
 				} catch (Exception e) {
@@ -46,7 +46,7 @@ public class AdminViewTeacherInfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdminViewTeacherInfo() {
+	public AdminViewTeacherReview() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 936, 577);
 		contentPane = new JPanel();
@@ -55,7 +55,7 @@ public class AdminViewTeacherInfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Teacher Database");
+		JLabel lblNewLabel = new JLabel("Teacher Review");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblNewLabel.setForeground(new Color(65, 105, 225));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -85,7 +85,7 @@ public class AdminViewTeacherInfo extends JFrame {
 		scrollPane.setViewportView(textArea);
 		try {
 			
-			FileReader fr = new FileReader("src\\repository data\\teacherDatabase.txt");
+			FileReader fr = new FileReader("src\\repository data\\teacherReview.txt");
 					
 			BufferedReader br = new BufferedReader(fr);
 		
